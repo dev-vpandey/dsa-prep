@@ -1,7 +1,14 @@
 # Nested List Weight Sum II — Medium
 Link: [https://leetcode.com/problems/nested-list-weight-sum-ii/](https://leetcode.com/problems/nested-list-weight-sum-ii/)
 Solved Date: 2026-03-03
-Review Date: 2026-03-06
+Review Date: 2026-03-21
+
+## SRS Tracking
+- Stage: 1
+- Review Date: 2026-03-21
+- Last Rating: Okay
+- Review Count: 1
+- Graduated: No
 
 ## Core Insight
 Instead of computing `value × (maxDepth - depth + 1)` directly, maintain a running sum across BFS levels — each integer naturally gets counted once per remaining level, eliminating the need to know maxDepth upfront.

@@ -1,6 +1,14 @@
 # Number of Connected Components in an Undirected Graph — Medium
 Link: [LeetCode](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
 Solved Date: 2026-02-28
+Review Date: 2026-03-21
+
+## SRS Tracking
+- Stage: 2
+- Review Date: 2026-03-24
+- Last Rating: Strong
+- Review Count: 2
+- Graduated: No
 
 ## Core Insight
 Every time you find an unvisited node, you've found a new component — flood-fill everything reachable from it, then keep counting.
@@ -91,29 +99,28 @@ import java.util.*;
 class Solution {
     public int countComponents(int n, int[][] edges) {
         Map<Integer, List<Integer>> adjList = new HashMap<>();
-        for (int[] edge : edges) {
+        for(int[] edge : edges) {
             int a = edge[0], b = edge[1];
             adjList.computeIfAbsent(a, k -> new ArrayList<>()).add(b);
             adjList.computeIfAbsent(b, k -> new ArrayList<>()).add(a);
         }
 
         Set<Integer> visited = new HashSet<>();
-        int components = 0;
-
-        for (int i = 0; i < n; i++) {
-            if (visited.contains(i)) continue;
-            if (!adjList.containsKey(i)) adjList.put(i, new ArrayList<>());
-            dfs(adjList, i, visited);
-            components++;
+        var comp = 0;
+        for(var i = 0; i < n; i++) {
+            if(!visited.contains(i)) {
+                dfs(i, visited, adjList);
+                comp++;
+            }
         }
-        return components;
+        return comp;
     }
 
-    private void dfs(Map<Integer, List<Integer>> adjList, int node, Set<Integer> visited) {
-        if (visited.contains(node)) return;
+    private void dfs(int node, Set<Integer> visited, Map<Integer, List<Integer>> adjList) {
+        if(visited.contains(node)) return;
         visited.add(node);
-        for (int nbr : adjList.get(node)) {
-            dfs(adjList, nbr, visited);
+        for(int nbr : adjList.getOrDefault(node, Collections.emptyList())) {
+            dfs(nbr, visited, adjList);
         }
     }
 }

@@ -1,6 +1,14 @@
 # Lowest Common Ancestor of a Binary Tree — Medium
 Link: [LeetCode](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/)
 Solved Date: 2026-02-28
+Review Date: 2026-03-24
+
+## SRS Tracking
+- Stage: 6
+- Review Date: 2026-06-20
+- Last Rating: Strong
+- Review Count: 1
+- Graduated: Yes
 
 ## Core Insight
 If you find p or q, return it immediately — if the other node is a descendant, the found node IS the LCA. If they're on opposite sides, the current node is the LCA.

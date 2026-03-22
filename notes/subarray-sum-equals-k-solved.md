@@ -1,6 +1,14 @@
 # Subarray Sum Equals K — Medium
 Link: https://leetcode.com/problems/subarray-sum-equals-k/description/
 Solved Date: 2026-03-01
+Review Date: 2026-03-24
+
+## SRS Tracking
+- Stage: 4
+- Review Date: 2026-04-05
+- Last Rating: Strong
+- Review Count: 1
+- Graduated: No
 
 ## Core Insight
 At each index j, the number of valid subarrays ending at j equals how many
