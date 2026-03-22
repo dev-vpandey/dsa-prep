@@ -1,6 +1,14 @@
 # Word Search — Medium
 Link: [LeetCode](https://leetcode.com/problems/word-search/)
 Solved Date: 2026-03-01
+Review Date: 2026-03-21
+
+## SRS Tracking
+- Stage: 1
+- Review Date: 2026-03-21
+- Last Rating: Okay
+- Review Count: 1
+- Graduated: No
 
 ## Core Insight
 Try every cell as a starting point and DFS with backtracking — mark cells visited to prevent reuse within a path, restore them after to allow reuse across different paths.

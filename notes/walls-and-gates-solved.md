@@ -1,7 +1,14 @@
 # Walls and Gates — Medium
 Link: [https://leetcode.com/problems/walls-and-gates/](https://leetcode.com/problems/walls-and-gates/)
 Solved Date: 2026-03-04
-Review Date: 2026-03-07
+Review Date: 2026-03-21
+
+## SRS Tracking
+- Stage: 1
+- Review Date: 2026-03-21
+- Last Rating: Okay
+- Review Count: 1
+- Graduated: No
 
 ## Core Insight
 Start BFS simultaneously from ALL gates — the first wave to reach any room is guaranteed to be the shortest distance.

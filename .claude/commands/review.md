@@ -29,10 +29,11 @@ Ask: "Ready? Starting with #1."
 ## Step 4 — Per Problem
 
 Full mode:
-- Show problem name + pattern tag only. No card yet.
+- Show problem name, problem link + pattern tag only. No card yet.
 - Wait for recall attempt.
 - "hint" → one nudge, direction only, no algorithm name
 - "blank" → mark Blank, show card immediately, move on
+- "give me a test case" or any request for a test case → ALWAYS use the exact test case from the card's Dry Run section. Never invent one.
 - After attempt: reveal card, compare what was right vs missed, assign rating
 
 Blitz mode:
@@ -49,6 +50,12 @@ Rating: [✅/🟡/🔴/❌]
 Next review: YYYY-MM-DD (Stage X → Y)
 Update @dsa-prep/notes/[file].md: Stage / Review Date / Last Rating / Review Count
 ```
+
+## Initial Stage for Newly Solved Problems
+When saving a card after a first solve (not a review), set Stage based on MAANG rating:
+- 5/5 → Stage 3 (nailed it clean, 7-day first review)
+- 4/5 → Stage 2 (one minor miss, 3-day first review)
+- 3/5 and below → Stage 1 (standard 1-day review)
 
 Graduation: when Stage hits 6 with Strong, output graduation notice and
 append to @dsa-prep/notes/GRADUATED.md: name | tag | date | next ping +90 days

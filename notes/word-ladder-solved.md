@@ -1,6 +1,14 @@
 # Word Ladder — Medium
 Link: [LeetCode](https://leetcode.com/problems/word-ladder/description/)
 Solved Date: 2026-02-27
+Review Date: 2026-03-21
+
+## SRS Tracking
+- Stage: 1
+- Review Date: 2026-03-21
+- Last Rating: Okay
+- Review Count: 1
+- Graduated: No
 
 ## Core Insight
 Treat each word as a graph node and a single-letter change as an edge — shortest transformation sequence = shortest path via BFS.

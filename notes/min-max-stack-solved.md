@@ -1,6 +1,14 @@
 # Min Max Stack — Medium
 Link: [Min Stack](https://leetcode.com/problems/min-stack/description/) | [Max Stack](https://leetcode.com/problems/max-stack/description/)
 Solved Date: 2026-03-01
+Review Date: 2026-03-23
+
+## SRS Tracking
+- Stage: 1
+- Review Date: 2026-03-23
+- Last Rating: Okay
+- Review Count: 1
+- Graduated: No
 
 ## Core Insight
 Maintain a parallel stack that tracks the running min AND max at every level — so any push/pop keeps them in sync with zero extra lookup cost.

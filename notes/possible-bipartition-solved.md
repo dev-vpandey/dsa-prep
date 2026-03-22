@@ -1,6 +1,14 @@
 # Possible Bipartition — Medium
 Link: [LeetCode](https://leetcode.com/problems/possible-bipartition/)
 Date: 2026-02-26
+Review Date: 2026-03-23
+
+## SRS Tracking
+- Stage: 1
+- Review Date: 2026-03-23
+- Last Rating: Okay
+- Review Count: 1
+- Graduated: No
 
 ## Core Insight
 If you model dislikes as edges in a graph, the problem reduces to checking whether the graph is 2-colorable (bipartite).
