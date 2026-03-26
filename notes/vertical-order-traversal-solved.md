@@ -1,7 +1,15 @@
 # Vertical Order Traversal of Binary Tree — Hard
-Link: https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/description/
+Problem Link: https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/description/
 Solved Date: 2026-03-04
+Pattern Tag: bfs / level-order / column-tracking / treemap / vertical-traversal
 Review Date: 2026-03-11
+
+## SRS Tracking
+- Stage: 5
+- Review Date: 2026-04-22
+- Last Rating: —
+- Review Count: 0
+- Graduated: No
 
 ## Real World Analogy
 Imagine taking a photo of a tree and dropping vertical curtains between columns. All nodes behind the same curtain belong together, ordered top-to-bottom, left-to-right in value when tied.
@@ -78,9 +86,6 @@ colMap after merge:
  2 → [7]
 
 Result: [[9],[3,15],[20],[7]] ✓
-
-## Pattern Tag
-bfs / level-order / column-tracking / treemap / vertical-traversal
 
 ## Boilerplate Template
 ```java

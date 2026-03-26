@@ -1,7 +1,20 @@
 # LRU Cache — Medium
-Link: https://leetcode.com/problems/lru-cache/
+Problem Link: https://leetcode.com/problems/lru-cache/
 Solved Date: 2026-03-01
+Pattern Tag: hashmap / doubly-linked-list / design / O(1)-data-structure
 Review Date: 2026-03-04
+
+## SRS Tracking
+- Stage: 5
+- Review Date: 2026-04-22
+- Last Rating: Strong
+- Review Count: 1
+- Graduated: No
+
+---
+
+# Real World Analogy
+—
 
 ## Core Insight
 O(1) removal requires knowing the predecessor — DLL's `prev` pointer gives every node self-contained context to remove itself without traversal.
@@ -102,9 +115,6 @@ get(3):
   found node3, moveToEnd (already at end)
   return 3  ✓
 ```
-
-## Pattern Tag
-`hashmap` / `doubly-linked-list` / `design` / `O(1)-data-structure`
 
 ## Boilerplate Template
 ```java

@@ -1,7 +1,15 @@
 # Course Schedule — Medium
-Link: https://leetcode.com/problems/course-schedule/
+Problem Link: https://leetcode.com/problems/course-schedule/
 Solved Date: 2026-03-18
+Pattern Tag: topological-sort / kahn's-algorithm / cycle-detection / directed-graph / bfs
 Review Date: 2026-03-25
+
+## SRS Tracking
+- Stage: 1
+- Review Date: 2026-03-23
+- Last Rating: —
+- Review Count: 0
+- Graduated: No
 
 ## Real World Analogy
 University course registration — you can't take Algorithms without taking Data Structures first.
@@ -78,9 +86,6 @@ Cycle case: add [1,3] → inDegree=[0,2,1,1]
 Queue: [0]
   poll 0 → processed=1, inDegree[1]=1 → not added
 Queue empty. processed(1) != 4 → false ✅
-
-## Pattern Tag
-topological-sort / kahn's-algorithm / cycle-detection / directed-graph / bfs
 
 ## Boilerplate Template
 ```java

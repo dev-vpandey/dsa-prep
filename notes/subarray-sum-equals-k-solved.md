@@ -1,6 +1,7 @@
 # Subarray Sum Equals K — Medium
-Link: https://leetcode.com/problems/subarray-sum-equals-k/description/
+Problem Link: https://leetcode.com/problems/subarray-sum-equals-k/description/
 Solved Date: 2026-03-01
+Pattern Tag: prefix-sum / hashmap / subarray-sum
 Review Date: 2026-03-24
 
 ## SRS Tracking
@@ -9,6 +10,11 @@ Review Date: 2026-03-24
 - Last Rating: Strong
 - Review Count: 1
 - Graduated: No
+
+---
+
+# Real World Analogy
+—
 
 ## Core Insight
 At each index j, the number of valid subarrays ending at j equals how many
@@ -76,9 +82,6 @@ nums = [1, 2, -1, 1, 2], k = 3
 Key clarification — stored index is the last index CONSUMED by the prefix.
 Subarray starts at stored_index+1, not stored_index.
 Example: prefix=2 found at index 2 → subarray is nums[3..4]=[1,2]=3, NOT nums[2..4]=[-1,1,2]=2
-
-## Pattern Tag
-prefix-sum / hashmap / subarray-sum
 
 ## Boilerplate Template
 ```java

@@ -1,7 +1,20 @@
 # Nested List Weight Sum — Medium
-Link: https://leetcode.com/problems/nested-list-weight-sum/
+Problem Link: https://leetcode.com/problems/nested-list-weight-sum/
 Solved Date: 2026-03-03
+Pattern Tag: bfs / level-order / nested-structure / weighted-depth
 Review Date: 2026-03-10
+
+## SRS Tracking
+- Stage: 1
+- Review Date: 2026-03-23
+- Last Rating: —
+- Review Count: 0
+- Graduated: No
+
+---
+
+# Real World Analogy
+—
 
 ## Core Insight
 BFS naturally maps each traversal level to a depth, so any integer found
@@ -74,9 +87,6 @@ Level 2 — process 4 elements:
   depth++ → depth=3
 
 Queue empty → return 10 ✅
-
-## Pattern Tag
-bfs / level-order / nested-structure / weighted-depth
 
 ## Boilerplate Template
 ```java

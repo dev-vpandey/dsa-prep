@@ -1,6 +1,7 @@
 # Walls and Gates — Medium
-Link: [https://leetcode.com/problems/walls-and-gates/](https://leetcode.com/problems/walls-and-gates/)
+Problem Link: [https://leetcode.com/problems/walls-and-gates/](https://leetcode.com/problems/walls-and-gates/)
 Solved Date: 2026-03-04
+Pattern Tag: multi-source-bfs / graph / matrix / shortest-distance
 Review Date: 2026-03-21
 
 ## SRS Tracking
@@ -9,6 +10,11 @@ Review Date: 2026-03-21
 - Last Rating: Okay
 - Review Count: 1
 - Graduated: No
+
+---
+
+# Real World Analogy
+—
 
 ## Core Insight
 Start BFS simultaneously from ALL gates — the first wave to reach any room is guaranteed to be the shortest distance.
@@ -93,9 +99,6 @@ INF  -1  INF  -1
  1   -1   2  -1
  0   -1   3   4
 ```
-
-## Pattern Tag
-`multi-source-bfs / graph / matrix / shortest-distance`
 
 ## Boilerplate Template
 ```java

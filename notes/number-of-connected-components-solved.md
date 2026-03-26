@@ -1,14 +1,20 @@
 # Number of Connected Components in an Undirected Graph — Medium
-Link: [LeetCode](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
+Problem Link: [LeetCode](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
 Solved Date: 2026-02-28
+Pattern Tag: graph / dfs / connected-components
 Review Date: 2026-03-21
 
 ## SRS Tracking
-- Stage: 2
-- Review Date: 2026-03-24
+- Stage: 4
+- Review Date: 2026-04-06
 - Last Rating: Strong
-- Review Count: 2
+- Review Count: 3
 - Graduated: No
+
+---
+
+# Real World Analogy
+—
 
 ## Core Insight
 Every time you find an unvisited node, you've found a new component — flood-fill everything reachable from it, then keep counting.
@@ -88,9 +94,6 @@ i=4: visited → skip
 
 Answer: 2 ✅
 ```
-
-## Pattern Tag
-graph / dfs / connected-components
 
 ## Boilerplate Template
 ```java

@@ -1,7 +1,20 @@
 # Set Matrix Zeroes — Medium
-Link: https://leetcode.com/problems/set-matrix-zeroes/description/
+Problem Link: https://leetcode.com/problems/set-matrix-zeroes/description/
 Solved Date: 2026-03-03
+Pattern Tag: matrix / two-pass / row-col-marking / hashset
 Review Date: 2026-03-10
+
+## SRS Tracking
+- Stage: 6
+- Review Date: 2026-06-21
+- Last Rating: —
+- Review Count: 0
+- Graduated: No
+
+---
+
+# Real World Analogy
+—
 
 ## Core Insight
 Record which rows and columns contain a zero first, then zero them out — never modify in-place during discovery or you'll create false zeros.
@@ -84,9 +97,6 @@ Output:
 [0, 0, 0]
 [1, 0, 1]
 ```
-
-## Pattern Tag
-`matrix` / `two-pass` / `row-col-marking` / `hashset`
 
 ## Boilerplate Template
 ```java

@@ -1,14 +1,20 @@
 # Lowest Common Ancestor of a Binary Tree — Medium
-Link: [LeetCode](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/)
+Problem Link: [LeetCode](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/)
 Solved Date: 2026-02-28
+Pattern Tag: binary-tree / recursion / postorder / lca
 Review Date: 2026-03-24
 
 ## SRS Tracking
 - Stage: 6
-- Review Date: 2026-06-20
+- Review Date: 2026-08-08
 - Last Rating: Strong
-- Review Count: 1
+- Review Count: 2
 - Graduated: Yes
+
+---
+
+# Real World Analogy
+—
 
 ## Core Insight
 If you find p or q, return it immediately — if the other node is a descendant, the found node IS the LCA. If they're on opposite sides, the current node is the LCA.
@@ -95,5 +101,3 @@ left=5, right=1 → both non-null → return 3 ✓
 
 The recursion **trusts** that if the other side returns null, it found nothing — meaning both nodes are on the side that returned something.
 
-## Pattern Tag
-binary-tree / recursion / postorder / lca

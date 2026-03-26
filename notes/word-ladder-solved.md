@@ -1,14 +1,20 @@
 # Word Ladder — Medium
-Link: [LeetCode](https://leetcode.com/problems/word-ladder/description/)
+Problem Link: [LeetCode](https://leetcode.com/problems/word-ladder/description/)
 Solved Date: 2026-02-27
+Pattern Tag: bfs / shortest-path / graph-implicit
 Review Date: 2026-03-21
 
 ## SRS Tracking
-- Stage: 1
-- Review Date: 2026-03-21
+- Stage: 3
+- Review Date: 2026-04-02
 - Last Rating: Okay
-- Review Count: 1
+- Review Count: 3
 - Graduated: No
+
+---
+
+# Real World Analogy
+—
 
 ## Core Insight
 Treat each word as a graph node and a single-letter change as an edge — shortest transformation sequence = shortest path via BFS.
@@ -184,5 +190,3 @@ Level 5: process dog → generate cog → cog == endWord → return 5 ✓
 └─────────────────────────────────────┴─────────────────────────────────────────────────────────────┘
 ```
 
-## Pattern Tag
-bfs / shortest-path / graph-implicit

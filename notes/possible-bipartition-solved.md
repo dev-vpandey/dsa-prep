@@ -1,14 +1,20 @@
 # Possible Bipartition — Medium
-Link: [LeetCode](https://leetcode.com/problems/possible-bipartition/)
-Date: 2026-02-26
+Problem Link: [LeetCode](https://leetcode.com/problems/possible-bipartition/)
+Solved Date: 2026-02-26
+Pattern Tag: bipartite-check / graph-coloring / bfs
 Review Date: 2026-03-23
 
 ## SRS Tracking
-- Stage: 1
-- Review Date: 2026-03-23
-- Last Rating: Okay
-- Review Count: 1
+- Stage: 4
+- Review Date: 2026-04-06
+- Last Rating: Strong
+- Review Count: 3
 - Graduated: No
+
+---
+
+# Real World Analogy
+—
 
 ## Core Insight
 If you model dislikes as edges in a graph, the problem reduces to checking whether the graph is 2-colorable (bipartite).
@@ -30,9 +36,17 @@ for each uncolored node:
 return true
 ```
 
+## Dry Run
+—
+
 ## Complexity
 - Time: O(N + E)
 - Space: O(N + E)
+
+## Boiler Plate Template
+```
+—
+```
 
 ## Watch Out For
 - Graph may be disconnected — loop over all nodes, not just from node 1
@@ -59,5 +73,3 @@ The `color[]` array **replaces** level tracking entirely — even depth = group 
 └──────────────────────┴──────────────────────────────┴──────────────────────────────┘
 ```
 
-## Pattern Tag
-bipartite-check / graph-coloring / bfs

@@ -25,13 +25,20 @@
 Graduated exception: Blank on a graduated card → reset to Stage 3 only, not Stage 1.
 
 ## Mode Assignment
-Given time available and card state, assign Full or Blitz:
-- Stage 1–2 → Full (always, ignore time)
-- Last rating Blank or Weak → Full (always, ignore time)
-- Stage 3–4, time ≥ 20 min → Full
-- Stage 3–4, time < 20 min → Blitz
+Given card state, assign Full, Snippet, or Blitz:
+- Last Rating Blank or Weak → Full (always, overrides everything)
+- Stage 1, Last Rating — (never reviewed) → Full
+- Stage 1–2, Last Rating Okay or Strong → Snippet
+- Stage 3–4 → Snippet
 - Stage 5–6 → Blitz
 - Graduated → Blitz
+
+## Snippet Mode — What It Means
+Snippet mode = boilerplate as comments + full code only for tricky parts.
+- User writes the overall structure/flow as comments (skeleton)
+- User writes full code only for the sections listed in the card's Watch Out For
+- Reviewer verifies: comments show correct understanding of flow AND code snippets are correct
+- Rating applies to both combined
 
 ## SRS Tracking Block (required on every card)
 ```

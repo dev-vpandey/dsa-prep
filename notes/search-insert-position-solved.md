@@ -1,7 +1,20 @@
 # Search Insert Position — Easy
-Link: https://leetcode.com/problems/search-insert-position/
+Problem Link: https://leetcode.com/problems/search-insert-position/
 Solved Date: 2026-03-02
+Pattern Tag: binary-search / lower-bound / sorted-array
 Review Date: 2026-03-09
+
+## SRS Tracking
+- Stage: 1
+- Review Date: 2026-03-23
+- Last Rating: —
+- Review Count: 0
+- Graduated: No
+
+---
+
+# Real World Analogy
+—
 
 ## Core Insight
 Binary search for the **lower bound** — the leftmost position where target fits.
@@ -51,9 +64,6 @@ Iteration 1: midIdx=2, nums[2]=5 ≥ 2 → right=2   | left=0, right=2
 Iteration 2: midIdx=1, nums[1]=3 ≥ 2 → right=1   | left=0, right=1
 Iteration 3: midIdx=0, nums[0]=1 < 2 → left=1    | left=1, right=1
 Loop ends → return 1 ✓ (2 inserts between index 0 and 1)
-
-## Pattern Tag
-binary-search / lower-bound / sorted-array
 
 ## Boilerplate Template
 ```java

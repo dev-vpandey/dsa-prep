@@ -1,7 +1,15 @@
 # Binary Tree Maximum Path Sum — Hard
-Link: https://leetcode.com/problems/binary-tree-maximum-path-sum/description/
+Problem Link: https://leetcode.com/problems/binary-tree-maximum-path-sum/description/
 Solved Date: 2026-03-05
+Pattern Tag: tree / dfs / post-order / path-sum / global-max
 Review Date: 2026-03-12
+
+## SRS Tracking
+- Stage: 4
+- Review Date: 2026-04-06
+- Last Rating: Strong
+- Review Count: 1
+- Graduated: No
 
 ## Real World Analogy
 Think of a road network in a city. You want to find the most profitable delivery route. At any intersection (node), you can collect toll revenue. You must pick a contiguous route — it can go left, right, or bend through a junction. But once a route "bends" at a junction, it can't continue upward — a truck can't go in two directions at once. You track the best total revenue seen across all possible routes.
@@ -83,9 +91,6 @@ Tree:
 | -10  | 9       | 35       | -10+9+35 = 34    | 42     | -10+35 = 25   |
 
 Answer: **42** (path: 15 → 20 → 7)
-
-## Pattern Tag
-`tree / dfs / post-order / path-sum / global-max`
 
 ## Boilerplate Template
 ```java

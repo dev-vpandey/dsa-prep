@@ -1,7 +1,15 @@
 # Binary Tree Right Side View — Medium
-Link: https://leetcode.com/problems/binary-tree-right-side-view/description/
+Problem Link: https://leetcode.com/problems/binary-tree-right-side-view/description/
 Solved Date: 2026-03-11
+Pattern Tag: bfs / level-order / dfs / reverse-preorder / right-side-view
 Review Date: 2026-03-18
+
+## SRS Tracking
+- Stage: 5
+- Review Date: 2026-04-22
+- Last Rating: —
+- Review Count: 0
+- Graduated: No
 
 ## Real World Analogy
 Standing to the right of a building and looking at each floor — you only see
@@ -90,9 +98,6 @@ visit(1, 0) → res=[1]
     visit(null, 2) → return
     visit(5, 2) → level 2 already seen, skip
 Result: [1, 3, 4]
-
-## Pattern Tag
-bfs / level-order / dfs / reverse-preorder / right-side-view
 
 ## Boilerplate Template
 ```java
