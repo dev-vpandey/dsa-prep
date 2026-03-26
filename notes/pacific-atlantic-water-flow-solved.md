@@ -1,7 +1,15 @@
 # Pacific Atlantic Water Flow — Medium
-Link: https://leetcode.com/problems/pacific-atlantic-water-flow/description/
+Problem Link: https://leetcode.com/problems/pacific-atlantic-water-flow/description/
 Solved Date: 2026-03-14
+Pattern Tag: multi-source-bfs / reverse-flow / matrix / intersection / graph
 Review Date: 2026-03-21
+
+## SRS Tracking
+- Stage: 1
+- Review Date: 2026-03-23
+- Last Rating: —
+- Review Count: 0
+- Graduated: No
 
 ## Real World Analogy
 Imagine two seas on opposite sides of a mountain range. You want to find all mountain peaks where rainfall drains into BOTH seas. Instead of standing at every peak and tracing water downhill (slow), you flood both seas uphill simultaneously and find where both floods meet.
@@ -129,9 +137,6 @@ T  T  .  .  .   → (3,0), (3,1)
 T  .  .  .  .   → (4,0)
 ```
 **Answer: `[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]`**
-
-## Pattern Tag
-`multi-source-bfs / reverse-flow / matrix / intersection / graph`
 
 ## Boilerplate Template
 ```java

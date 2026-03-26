@@ -1,14 +1,20 @@
 # Min Max Stack — Medium
-Link: [Min Stack](https://leetcode.com/problems/min-stack/description/) | [Max Stack](https://leetcode.com/problems/max-stack/description/)
+Problem Link: [Min Stack](https://leetcode.com/problems/min-stack/description/) | [Max Stack](https://leetcode.com/problems/max-stack/description/)
 Solved Date: 2026-03-01
+Pattern Tag: stack / design / monotonic-tracking / two-stack
 Review Date: 2026-03-23
 
 ## SRS Tracking
-- Stage: 1
-- Review Date: 2026-03-23
-- Last Rating: Okay
-- Review Count: 1
+- Stage: 4
+- Review Date: 2026-04-06
+- Last Rating: Strong
+- Review Count: 3
 - Graduated: No
+
+---
+
+# Real World Analogy
+—
 
 ## Core Insight
 Maintain a parallel stack that tracks the running min AND max at every level — so any push/pop keeps them in sync with zero extra lookup cost.
@@ -91,9 +97,6 @@ popMax():
     main:[5,1,3]  minMax:[{5,5},{1,5},{min:1,max:5}]
   return 5 ✓
 ```
-
-## Pattern Tag
-`stack` / `design` / `monotonic-tracking` / `two-stack`
 
 ## Boilerplate Template
 ```java

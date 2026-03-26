@@ -1,7 +1,20 @@
 # Minimum Window Substring — Hard
-Link: [https://leetcode.com/problems/minimum-window-substring/](https://leetcode.com/problems/minimum-window-substring/)
+Problem Link: [https://leetcode.com/problems/minimum-window-substring/](https://leetcode.com/problems/minimum-window-substring/)
 Solved Date: 2026-03-01
+Pattern Tag: sliding-window / two-pointer / frequency-map
 Review Date: 2026-03-08
+
+## SRS Tracking
+- Stage: 3
+- Review Date: 2026-03-30
+- Last Rating: Strong
+- Review Count: 1
+- Graduated: No
+
+---
+
+# Real World Analogy
+—
 
 ## Core Insight
 Use two pointers to maintain a window; expand right to make it valid, shrink left to make it minimal — but only track `formed` when a character's **count** (not just presence) satisfies the requirement.
@@ -107,9 +120,6 @@ Correct: left=6 after previous shrink
 
 Result: s.substring(9, 9+4) = "BANC" ✓
 ```
-
-## Pattern Tag
-`sliding-window` / `two-pointer` / `frequency-map`
 
 ## Boilerplate Template
 ```java

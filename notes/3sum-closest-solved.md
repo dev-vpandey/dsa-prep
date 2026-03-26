@@ -1,7 +1,20 @@
 # 3Sum Closest — Medium
-Link: [https://leetcode.com/problems/3sum-closest/description/](https://leetcode.com/problems/3sum-closest/description/)
+Problem Link: [https://leetcode.com/problems/3sum-closest/description/](https://leetcode.com/problems/3sum-closest/description/)
 Solved Date: 2026-03-02
+Pattern Tag: two-pointer / sorting / three-sum
 Review Date: 2026-03-09
+
+## SRS Tracking
+- Stage: 1
+- Review Date: 2026-03-23
+- Last Rating: —
+- Review Count: 0
+- Graduated: No
+
+---
+
+# Real World Analogy
+—
 
 ## Core Insight
 Sort the array, fix one element, then use two pointers to greedily shrink the search space while tracking the closest sum seen.
@@ -77,9 +90,6 @@ i=1 (num=-1), left=2, right=3
 
 return 2 ✅
 ```
-
-## Pattern Tag
-`two-pointer / sorting / three-sum`
 
 ## Boilerplate Template
 ```java

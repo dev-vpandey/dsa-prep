@@ -5,7 +5,13 @@
       "WebFetch(domain:leetcode.com)",
       "mcp__claude_ai_Notion__notion-search",
       "mcp__claude_ai_Notion__notion-fetch",
-      "WebSearch"
+      "WebSearch",
+      "WebFetch(domain:www.notion.so)",
+      "Read(//Users/vicky/.claude/skills/**)",
+      "Read(//Users/vicky/.claude/commands/**)",
+      "Bash(find /Users/vicky/.claude -name *.jsonl)",
+      "Bash(ls /Users/vicky/Java_Projects/dsa-prep/notes/*-solved.md)",
+      "Bash(wc -c notes/*.md)"
     ]
   }
 }

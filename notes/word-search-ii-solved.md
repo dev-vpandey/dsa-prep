@@ -1,7 +1,20 @@
 # Word Search II — Hard
-Link: https://leetcode.com/problems/word-search-ii/description/
+Problem Link: https://leetcode.com/problems/word-search-ii/description/
 Solved Date: 2026-03-02
+Pattern Tag: trie / dfs / backtracking / matrix
 Review Date: 2026-03-09
+
+## SRS Tracking
+- Stage: 1
+- Review Date: 2026-03-23
+- Last Rating: —
+- Review Count: 0
+- Graduated: No
+
+---
+
+# Real World Analogy
+—
 
 ## Core Insight
 Build a Trie from all target words, then DFS from every board cell — the Trie guides which paths are worth exploring without checking every word independently.
@@ -110,9 +123,6 @@ Start DFS at (0,0) 'o':
 
 Result: ["eat", "oath"] ✓
 ```
-
-## Pattern Tag
-`trie / dfs / backtracking / matrix`
 
 ## Boilerplate Template
 ```java

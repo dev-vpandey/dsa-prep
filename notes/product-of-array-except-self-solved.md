@@ -1,7 +1,20 @@
 # Product of Array Except Self — Medium
-Link: https://leetcode.com/problems/product-of-array-except-self/description/
+Problem Link: https://leetcode.com/problems/product-of-array-except-self/description/
 Solved Date: 2026-03-03
+Pattern Tag: prefix-product / two-pass / space-optimization / array
 Review Date: 2026-03-06
+
+## SRS Tracking
+- Stage: 1
+- Review Date: 2026-03-23
+- Last Rating: —
+- Review Count: 0
+- Graduated: No
+
+---
+
+# Real World Analogy
+—
 
 ## Core Insight
 Every answer is just (product of everything LEFT of i) × (product of everything RIGHT of i) — store the left pass in the result array, then fold in the right pass with a single running variable.
@@ -74,11 +87,6 @@ i=0: res[0] = 1 * 24 = 24  | rightProd = 24 * 1 = 24
 
 res = [24, 12, 8, 6] ✓
 ```
-
-## Pattern Tag
-`prefix-product` / `two-pass` / `space-optimization` / `array`
-
----
 
 ## Boilerplate Template
 ```java

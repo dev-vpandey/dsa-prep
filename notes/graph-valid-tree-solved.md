@@ -1,6 +1,7 @@
 # Graph Valid Tree — Medium
-Link: https://leetcode.com/problems/graph-valid-tree/
+Problem Link: https://leetcode.com/problems/graph-valid-tree/
 Solved Date: 2026-03-22
+Pattern Tag: graph / dfs / connected-components / tree-validation
 Review Date: 2026-03-25
 
 ## SRS Tracking
@@ -9,6 +10,11 @@ Review Date: 2026-03-25
 - Last Rating: —
 - Review Count: 0
 - Graduated: No
+
+---
+
+# Real World Analogy
+—
 
 ## Core Insight
 A valid tree has exactly two properties: connected (1 component) and acyclic.
@@ -115,5 +121,3 @@ class Solution {
 }
 ```
 
-## Pattern Tag
-graph / dfs / connected-components / tree-validation

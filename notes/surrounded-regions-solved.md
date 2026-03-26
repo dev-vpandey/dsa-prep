@@ -1,7 +1,15 @@
 # Surrounded Regions — Medium
-Link: https://leetcode.com/problems/surrounded-regions/
+Problem Link: https://leetcode.com/problems/surrounded-regions/
 Solved Date: 2026-03-15
+Pattern Tag: multi-source-bfs / reverse-thinking / flood-fill / matrix / boundary-seed
 Review Date: 2026-03-22
+
+## SRS Tracking
+- Stage: 1
+- Review Date: 2026-03-23
+- Last Rating: —
+- Review Count: 0
+- Graduated: No
 
 ## Real World Analogy
 Think of a Go board game. Stones on the edge of the board can never be captured
@@ -107,9 +115,6 @@ X O O X
 X O X X
 O O X X   (unchanged — all were connected to border)
 ```
-
-## Pattern Tag
-multi-source-bfs / reverse-thinking / flood-fill / matrix / boundary-seed
 
 ## Boilerplate Template
 ```java

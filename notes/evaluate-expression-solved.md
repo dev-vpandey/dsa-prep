@@ -1,7 +1,20 @@
 # Evaluate Expression — Hard
-Link: [Evaluate Expression](https://bytebytego.com/exercises/coding-patterns/stacks/evaluate-expression)
+Problem Link: [Evaluate Expression](https://bytebytego.com/exercises/coding-patterns/stacks/evaluate-expression)
 Solved Date: 2026-03-02
+Pattern Tag: stack / expression-evaluation / parentheses / sign-tracking
 Review Date: 2026-03-09
+
+## SRS Tracking
+- Stage: 1
+- Review Date: 2026-03-23
+- Last Rating: —
+- Review Count: 0
+- Graduated: No
+
+---
+
+# Real World Analogy
+—
 
 ## Core Insight
 Use a stack to save and restore the outer expression's state (`res` + `sign`) each time you enter a parenthesized sub-expression, then merge the sub-result back using the saved sign when you hit `)`.
@@ -108,9 +121,6 @@ The last number in any expression is NEVER followed by an operator, so `curr` ne
 return: 1 + 2*1 = 3 ✓   (just `return res` would give 1 — wrong)
 ```
 If the string ends with `)`, the `)` block resets `curr=0`, so `curr*sign = 0` and only `res` matters — safe either way.
-
-## Pattern Tag
-`stack` / `expression-evaluation` / `parentheses` / `sign-tracking`
 
 ## Boilerplate Template
 ```java

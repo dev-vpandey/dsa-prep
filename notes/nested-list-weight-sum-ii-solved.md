@@ -1,6 +1,7 @@
 # Nested List Weight Sum II — Medium
-Link: [https://leetcode.com/problems/nested-list-weight-sum-ii/](https://leetcode.com/problems/nested-list-weight-sum-ii/)
+Problem Link: [https://leetcode.com/problems/nested-list-weight-sum-ii/](https://leetcode.com/problems/nested-list-weight-sum-ii/)
 Solved Date: 2026-03-03
+Pattern Tag: bfs / level-order / carry-forward / inverse-weighting / running-sum
 Review Date: 2026-03-21
 
 ## SRS Tracking
@@ -9,6 +10,11 @@ Review Date: 2026-03-21
 - Last Rating: Okay
 - Review Count: 1
 - Graduated: No
+
+---
+
+# Real World Analogy
+—
 
 ## Core Insight
 Instead of computing `value × (maxDepth - depth + 1)` directly, maintain a running sum across BFS levels — each integer naturally gets counted once per remaining level, eliminating the need to know maxDepth upfront.
@@ -94,9 +100,6 @@ Level 3:
 ```
 
 Why it matches weights: `1` added 3 times (3), `4` added 2 times (8), `6` added 1 time (6) → 17
-
-## Pattern Tag
-`bfs / level-order / carry-forward / inverse-weighting / running-sum`
 
 ## Boilerplate Template
 ```java
