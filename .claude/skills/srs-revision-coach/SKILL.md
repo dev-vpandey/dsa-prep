@@ -9,9 +9,9 @@
 |---|---|
 | 1 | 1 day |
 | 2 | 3 days |
-| 3 | 7 days |
-| 4 | 14 days |
-| 5 | 30 days |
+| 3 | 10 days |
+| 4 | 21 days |
+| 5 | 45 days |
 | 6 | 90 days — graduated |
 
 ## Rating → Next Interval
@@ -59,3 +59,16 @@ Last Rating: [Strong / Okay / Weak / Blank]
 Review Count: [increment by 1]
 Graduated: [Yes if Stage just hit 6 with Strong, otherwise No]
 ```
+
+## Timeout Rule
+If the user goes quiet for 3+ minutes during a review problem, prompt once: "Still working on it?"
+If stuck or no response → rate Blank, show full card immediately, move on. One prompt only.
+
+## Overdue Triage
+Any problem overdue 3+ days → force Blitz mode regardless of Stage or Last Rating.
+Goal: clear the debt fast. Correct core-insight recall counts as Okay minimum.
+
+## Double-Strong Fast-Track (Stage 3 only)
+If a Stage 3 problem was rated Strong last review AND is rated Strong again now → advance to Stage 4 immediately.
+Do not wait for the remaining 10-day cycle. Update Stage in both the card and REVIEW.md.
+Check: if Last Rating = Strong before this review, current Strong = fast-track.

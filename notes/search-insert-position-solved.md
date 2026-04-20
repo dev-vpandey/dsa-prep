@@ -5,10 +5,10 @@ Pattern Tag: binary-search / lower-bound / sorted-array
 Review Date: 2026-03-09
 
 ## SRS Tracking
-- Stage: 1
-- Review Date: 2026-03-23
-- Last Rating: —
-- Review Count: 0
+- Stage: 3
+- Review Date: 2026-04-01
+- Last Rating: Weak
+- Review Count: 3
 - Graduated: No
 
 ---

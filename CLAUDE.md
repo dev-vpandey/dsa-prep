@@ -10,6 +10,10 @@ Revision and SRS logic are handled separately via /review — never mix the two 
 - Language: Java 21
 - Current weak spots: Recursion, Advanced DSA topic like Graphs Segement Tree and DP
 
+## Daily Rhythm
+1. New problem first (30-40 min) — use `/start` to find what's next
+2. Reviews after — `/review-dsa` handles up to 5, no more
+
 ## Pattern Card Template
 - When saving a solved problem, always use /Users/vicky/Java_Projects/interview-prep/shared/templates/dsa-pattern-card.md.
 - Save the completed card to @notes/[problem-name]-solved.md.
@@ -33,9 +37,15 @@ When I'm working through the problem on my own:
   - No algorithm names, no code, no "use a hashmap" type giveaways
   - Example good hint: "What if you thought about what each element needs from its neighbors?"
   - Example bad hint: "This is a sliding window problem"
-- If I say "stuck" -> give me the detailed explanation of the core concept of the problem with a REAL WORLD example
+- If I say "stuck" → run the Pattern Recognition Framework step by step:
+  1. SIZE: What is n? · n≤20 → brute OK · n≤10³ → O(n²) OK · n≤10⁶ → need O(n log n)
+  2. SHAPE: sorted → binary search · tree/graph → DFS/BFS · subarray/string → sliding window · matrix → DFS/BFS
+  3. SMELL: count ways → DP · shortest path → BFS/Dijkstra · all combos → backtracking · max/min optimal → greedy or DP
+  4. MATCH: look up @notes/cheatsheets/cheatsheet-index.md — which template fits 70%+? Surface that section.
+  5. BRUTE: if nothing matches → write O(n²) or O(2ⁿ) brute force, identify the bottleneck — that bottleneck IS the pattern
+  Then give a one-sentence real-world analogy for whichever pattern surfaced.
 - If I say "hint hint" → slightly more concrete, but still no algorithm name
-- If I say "hint hint hint" → now you can name the pattern/technique
+- If I say "hint hint hint" → name the pattern/technique AND surface the relevant cheatsheet section from @notes/cheatsheets/ using cheatsheet-index.md
 
 ### Step 3 — Dry Run
 After I describe my approach (or after a hint):
@@ -67,10 +77,21 @@ One sentence on why we can't do better (or if we could, what it would take)
 ### Step 6 — After a Successful Solve
 When I solve it correctly (either my own solution or after seeing yours):
 - Fill out /Users/vicky/Java_Projects/interview-prep/shared/templates/dsa-pattern-card.md with all sections complete
-- Set Review Date = today + 1 day
-- Set Stage = 1, Last Rating = —, Review Count = 0, Graduated = No
+- Use YYYY-MM-DD format for ALL dates (Solved Date, Review Date)
+- Set Stage + Review Date based on MAANG rating:
+  - 5/5 → Stage 3, Review Date = today + 7
+  - 4/5 → Stage 2, Review Date = today + 3
+  - ≤3/5 → Stage 1, Review Date = today + 1
+- Set Last Rating = —, Review Count = 0, Graduated = No
 - Save to @notes/[problem-name]-solved.md
-- Tell me: "Saved. Run /review tomorrow to start the retention cycle."
+- Append a row to @notes/REVIEW.md: | [file] | [Problem] | [Tag] | [Stage] | [Review Date] | — | 0 | No |
+- Pattern Lock: announce the sprint based on stage assigned:
+  - Stage 1 or 2: "Day+1 = full recall review. Day+3 = write the cheatsheet boilerplate cold from memory — no peeking."
+  - Stage 3 (5/5 clean solve): "Pattern locked — sprint skipped. Next review in 7 days."
+- 3-Problem Rule: count problems in @notes/REVIEW.md that share this pattern tag.
+  - If < 3: announce "Pattern has X/3 problems. Here's your next one:" and immediately give an unseen problem from same tag.
+  - If ≥ 3: announce "Pattern solid at 3+ problems. Ready for a new pattern when you are."
+  Always announce this — never wait for me to ask.
 
 ```
 # I will output the content, you save it as:

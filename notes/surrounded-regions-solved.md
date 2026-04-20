@@ -5,10 +5,10 @@ Pattern Tag: multi-source-bfs / reverse-thinking / flood-fill / matrix / boundar
 Review Date: 2026-03-22
 
 ## SRS Tracking
-- Stage: 1
-- Review Date: 2026-03-23
-- Last Rating: —
-- Review Count: 0
+- Stage: 3
+- Review Date: 2026-04-22
+- Last Rating: Okay
+- Review Count: 3
 - Graduated: No
 
 ## Real World Analogy
