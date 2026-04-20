@@ -5,10 +5,10 @@ Pattern Tag: graph / dfs / connected-components / tree-validation
 Review Date: 2026-03-25
 
 ## SRS Tracking
-- Stage: 2
-- Review Date: 2026-03-25
-- Last Rating: —
-- Review Count: 0
+- Stage: 4
+- Review Date: 2026-04-26
+- Last Rating: Strong
+- Review Count: 1
 - Graduated: No
 
 ---

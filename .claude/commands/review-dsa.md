@@ -3,15 +3,21 @@ Load @.claude/skills/srs-revision-coach/SKILL.md for interval calculations and m
 Then run a revision session over @dsa-prep/notes/ using this flow:
 
 ## Step 1 — Setup
+Ask: "Done a new problem today? (Recommended: do one first before reviews.)"
 Ask: "How much time do you have? (minutes)"
-Read @dsa-prep/notes/REVIEW.md — this is the index of all problems with Stage, Review Date, Last Rating, Pattern Tag, and file reference.
+Read @dsa-prep/notes/REVIEW.md — index of all problems with Stage, Review Date, Last Rating, Pattern Tag, and file reference.
 Flag any card whose row is missing required fields before proceeding.
 
 ## Step 2 — Build Queue
-Priority: Blank first → Weak → due today → overdue. Max 5 per session. Max 2 per pattern tag. Hard daily cap: 10 problems total per day.
-Assign Full or Blitz per problem using the mode assignment rules from the skill.
-Overflow handling: if more than 10 problems are due today, defer the lowest-priority ones by 1 day — update their Review Date in REVIEW.md immediately, don't just note them as overflow.
-List deferred problems so the user knows what moved.
+Hard cap: 5 problems per session. No exceptions.
+Priority order:
+1. Blank rating (Full mode)
+2. Weak rating (Full mode)
+3. Overdue 3+ days (force Blitz regardless of Stage — see Overdue Triage rule in SKILL.md)
+4. Overdue 1-2 days (normal mode assignment)
+5. Due today (normal mode assignment)
+Max 2 per pattern tag.
+If more than 5 qualify, the lowest-priority ones simply stay for the next session. Do NOT defer by updating REVIEW.md dates.
 
 ## Step 3 — Session Plan
 Show before starting, always:
@@ -19,40 +25,42 @@ Show before starting, always:
 ⏱ [N] min — [date]
 
 #  Problem          Stage  Mode   Reason
-1  Two Sum          2      Full   Stage 1-2
-2  Word Search II   4      Full   last: Blank
+1  Two Sum          2      Full   Blank
+2  Word Search II   3      Blitz  Overdue 4d
 3  Clone Graph      5      Blitz  Stage 5+
 
-Overflow (tomorrow): X, Y
+Remaining due: X more — next session.
 ```
 Ask: "Ready? Starting with #1."
 
 ## Step 4 — Per Problem
 
 Full mode:
-- Show problem name, problem link + pattern tag only. No card yet.
+- Show problem name and problem link only. No tag, no card yet.
 - Wait for recall attempt.
 - "hint" → one nudge, direction only, no algorithm name
 - "blank" → mark Blank, show card immediately, move on
 - "give me a test case" or any request for a test case → ALWAYS use the exact test case from the card's Dry Run section. Never invent one.
-- After attempt: reveal card, compare what was right vs missed, assign rating
+- After attempt: ask "What's the time and space complexity?" — wait for answer, then reveal card, compare what was right vs missed, factor complexity into rating
 
 Snippet mode:
-- Show problem name, problem link + pattern tag only. Nothing else.
+- Show problem name and problem link only. No tag, nothing else.
 - Prompt: "Write comments for parts you know cold + full code for parts you think are tricky."
 - "blank" → mark Blank, show full card, move on
 - After attempt:
   - Verify comments are correct
   - Verify code snippets are correct
   - If a critical part has no comment AND no code → ask user to cover it before rating
-  - Once coverage is complete and aligned → rate immediately, no follow-up
+  - Ask "What's the time and space complexity?" — wait for answer
+  - Once coverage + complexity are complete and correct → rate immediately, no follow-up
 - If comments are wrong on flow → Weak regardless of code
 - If critical code snippet has a bug → Okay at best, Weak if severe
+- Wrong complexity with correct code → cap at Okay
 - If submission is complete and correct → rate immediately and move on
 
 Blitz mode:
 - Show: "Problem: [name] — [tag] · Core insight in one sentence: ___?"
-- "yes" → Strong, next problem instantly
+- "yes" → follow up: "Time and space?" — correct → Strong, next problem instantly; wrong → Okay
 - "no" → show core insight from card, Blank, move on
 - No pseudocode, no discussion
 
@@ -65,6 +73,11 @@ Next review: YYYY-MM-DD (Stage X → Y)
 Update @dsa-prep/notes/[file].md: Stage / Review Date / Last Rating / Review Count
 Update @dsa-prep/notes/REVIEW.md: same row — Stage / Review Date / Last Rating / Review Count
 ```
+
+Then always show:
+📄 Card: @notes/[file].md — say "move on" to continue, or review the card first.
+
+Wait for "move on" before starting the next problem.
 
 ## Initial Stage for Newly Solved Problems
 When saving a card after a first solve (not a review), set Stage based on MAANG rating:

@@ -11,7 +11,12 @@
       "Read(//Users/vicky/.claude/commands/**)",
       "Bash(find /Users/vicky/.claude -name *.jsonl)",
       "Bash(ls /Users/vicky/Java_Projects/dsa-prep/notes/*-solved.md)",
-      "Bash(wc -c notes/*.md)"
+      "Bash(wc -c notes/*.md)",
+      "Bash(sort -k2)",
+      "Bash(python3 -c ':*)",
+      "Bash(ls -lt /Users/vicky/Java_Projects/dsa-prep/notes/*.md)",
+      "Skill(update-config)",
+      "mcp__claude_ai_Google_Calendar__create_event"
     ]
   }
 }

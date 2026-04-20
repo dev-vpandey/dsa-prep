@@ -5,10 +5,10 @@ Pattern Tag: bfs / level-order / column-tracking / treemap / vertical-traversal
 Review Date: 2026-03-11
 
 ## SRS Tracking
-- Stage: 5
-- Review Date: 2026-04-22
-- Last Rating: —
-- Review Count: 0
+- Stage: 3
+- Review Date: 2026-04-08
+- Last Rating: Okay
+- Review Count: 3
 - Graduated: No
 
 ## Real World Analogy

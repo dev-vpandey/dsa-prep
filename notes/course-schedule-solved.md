@@ -6,9 +6,9 @@ Review Date: 2026-03-25
 
 ## SRS Tracking
 - Stage: 1
-- Review Date: 2026-03-23
-- Last Rating: —
-- Review Count: 0
+- Review Date: 2026-04-13
+- Last Rating: Blank
+- Review Count: 3
 - Graduated: No
 
 ## Real World Analogy
