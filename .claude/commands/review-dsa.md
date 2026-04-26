@@ -5,7 +5,8 @@ Then run a revision session over @dsa-prep/notes/ using this flow:
 ## Step 1 — Setup
 Ask: "Done a new problem today? (Recommended: do one first before reviews.)"
 Ask: "How much time do you have? (minutes)"
-Read @dsa-prep/notes/REVIEW.md — index of all problems with Stage, Review Date, Last Rating, Pattern Tag, and file reference.
+Read @dsa-prep/notes/REVIEW.md and @dsa-prep/notes/GAP-DRILLS.md.
+If GAP-DRILLS.md has open gaps, show them before the session plan so the user is aware.
 Flag any card whose row is missing required fields before proceeding.
 
 ## Step 2 — Build Queue
@@ -97,3 +98,9 @@ Always show at the end:
 Weakest pattern this week: ...
 Next session: YYYY-MM-DD — N problems due
 ```
+
+Then for every Weak or Blank, classify and log to GAP-DRILLS.md:
+- **Muscle** (right approach, fumbled same mechanic again) → prescribe specific cold-write drill. No extra problems.
+- **Conceptual** (wrong approach or missed core insight) → after reviews, give up to 2 fresh problems from same tag (Full mode, no hints unless asked). Strong = closed. Still weak after 2 → defer to tomorrow.
+- When in doubt → conceptual.
+- Update GAP-DRILLS.md: add row on new gap, mark Closed when mastered, purge Closed rows older than 7 days.

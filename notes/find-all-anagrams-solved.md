@@ -5,9 +5,9 @@ Pattern Tag: sliding-window / frequency-map / fixed-window
 
 ## SRS Tracking
 - Stage: 4
-- Review Date: 2026-04-07
-- Last Rating: Strong
-- Review Count: 4
+- Review Date: 2026-05-02
+- Last Rating: Weak
+- Review Count: 5
 - Graduated: No
 
 ---
@@ -85,33 +85,26 @@ Result: [0, 6] ✓
 
 ## Boilerplate Template
 ```java
-import java.util.*;
-
 class Solution {
     public List<Integer> findAnagrams(String s, String p) {
-        int[] pFreq = new int[26], sFreq = new int[26];
-        for (char c : p.toCharArray()) pFreq[c - 'a']++;
+        Map<Character, Integer> pmap = new HashMap<>();
+        for (char c : p.toCharArray()) pmap.merge(c, 1, Integer::sum);
 
-        int need = 0;
-        for (int f : pFreq) if (f > 0) need++;
+        List<Integer> res = new ArrayList<>();
+        Map<Character, Integer> smap = new HashMap<>();
+        int left = 0, right = 0;
 
-        List<Integer> result = new ArrayList<>();
-        int matched = 0;
-
-        for (int right = 0; right < s.length(); right++) {
-            int rc = s.charAt(right) - 'a';
-            sFreq[rc]++;
-            if (sFreq[rc] == pFreq[rc]) matched++;
-
-            if (right >= p.length()) {
-                int lc = s.charAt(right - p.length()) - 'a';
-                if (sFreq[lc] == pFreq[lc]) matched--; // about to drop below required
-                sFreq[lc]--;
+        while (right < s.length()) {
+            smap.merge(s.charAt(right), 1, Integer::sum);      // expand right
+            if (right - left + 1 == p.length()) {              // window full
+                if (pmap.equals(smap)) res.add(left);
+                smap.merge(s.charAt(left), -1, Integer::sum);  // shrink left
+                if (smap.get(s.charAt(left)) == 0) smap.remove(s.charAt(left));
+                left++;
             }
-
-            if (matched == need) result.add(right - p.length() + 1);
+            right++;
         }
-        return result;
+        return res;
     }
 }
 ```

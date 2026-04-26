@@ -16,7 +16,12 @@
       "Bash(python3 -c ':*)",
       "Bash(ls -lt /Users/vicky/Java_Projects/dsa-prep/notes/*.md)",
       "Skill(update-config)",
-      "mcp__claude_ai_Google_Calendar__create_event"
+      "mcp__claude_ai_Google_Calendar__create_event",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(gh pr *)"
     ]
   }
 }

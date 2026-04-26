@@ -124,7 +124,21 @@ for (int right = 0; right < s.length(); right++) {
     result = Math.max(result, right - left + 1);
 }
 
-// Fixed window — size k
+// Fixed window — size k (frequency map variant)
+int left = 0;
+Map<Character, Integer> smap = new HashMap<>();
+while (right < s.length()) {
+    smap.merge(s.charAt(right), 1, Integer::sum);          // expand right
+    if (right - left + 1 == k) {                           // window full
+        // record answer (e.g. pmap.equals(smap))
+        smap.merge(s.charAt(left), -1, Integer::sum);      // shrink left
+        if (smap.get(s.charAt(left)) == 0) smap.remove(s.charAt(left));
+        left++;
+    }
+    right++;
+}
+
+// Fixed window — size k (array/index variant)
 for (int right = 0; right < arr.length; right++) {
     // add arr[right] to window
     if (right >= k) { /* remove arr[right - k] from window */ }

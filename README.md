@@ -1,7 +1,8 @@
 # DSA Prep — MAANG Coaching System
 
-AI-coached DSA prep in Java 21. Combines active problem-solving with Spaced Repetition (SRS) to lock in patterns.
+> **AI-coached DSA prep in Java 21. Combines active problem-solving with Spaced Repetition (SRS) to lock in patterns**
 
+If this saves you time, a ⭐ on the repo helps others find it.
 ---
 
 ## Daily Rhythm
