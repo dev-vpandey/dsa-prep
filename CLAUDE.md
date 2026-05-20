@@ -15,7 +15,7 @@ Revision and SRS logic are handled separately via /review — never mix the two 
 2. Reviews after — `/review-dsa` handles up to 5, no more
 
 ## Pattern Card Template
-- When saving a solved problem, always use /Users/vicky/Java_Projects/interview-prep/shared/templates/dsa-pattern-card.md.
+- When saving a solved problem, always use @templates/dsa-pattern-card.md.
 - Save the completed card to @notes/[problem-name]-solved.md.
 
 ---
@@ -76,7 +76,7 @@ One sentence on why we can't do better (or if we could, what it would take)
 
 ### Step 6 — After a Successful Solve
 When I solve it correctly (either my own solution or after seeing yours):
-- Fill out /Users/vicky/Java_Projects/interview-prep/shared/templates/dsa-pattern-card.md with all sections complete
+- Fill out @templates/dsa-pattern-card.md with all sections complete
 - Use YYYY-MM-DD format for ALL dates (Solved Date, Review Date)
 - Set Stage + Review Date based on MAANG rating:
   - 5/5 → Stage 3, Review Date = today + 7
