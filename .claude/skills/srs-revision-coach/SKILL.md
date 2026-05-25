@@ -33,6 +33,10 @@ Given card state, assign Full, Snippet, or Blitz:
 - Stage 5–6 → Blitz
 - Graduated → Blitz
 
+## Cheatsheet Prime
+Full mode only → before showing problem, look up card's Pattern Tag in @notes/cheatsheets/cheatsheet-index.md, output one line: `📖 [tag] → [file] § [section]`. No content dump.
+Snippet/Blitz → skip.
+
 ## Snippet Mode — What It Means
 Snippet mode = boilerplate as comments + full code only for tricky parts.
 - User writes the overall structure/flow as comments (skeleton)
