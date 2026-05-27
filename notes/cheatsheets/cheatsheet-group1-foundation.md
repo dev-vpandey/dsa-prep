@@ -99,6 +99,18 @@ while (mid <= hi) {
     else if (arr[mid] == 1) mid++;
     else swap(arr, mid, hi--);
 }
+
+// Same-direction scan+place (move zeroes / in-place partition)
+// left = next write slot, right scans ahead
+int left = 0;
+for (int right = 0; right < nums.length; right++) {
+    if (nums[right] != 0) {
+        int tmp = nums[left];
+        nums[left] = nums[right];
+        nums[right] = tmp;
+        left++;
+    }
+}
 ```
 
 ⚠️ Watch out: skip condition must ALSO check `left < right` — pointers can cross during skipping. Always guard both inner while loops.

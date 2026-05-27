@@ -119,26 +119,34 @@ boolean hasCycle(int node) {
 
 ```java
 // Kahn's Algorithm (BFS — preferred, detects cycle naturally)
-int[] inDegree = new int[n];
-for (int[] edge : edges) inDegree[edge[1]]++;          // count incoming edges
+int[] inDegree = new int[numCourses];
+Map<Integer, List<Integer>> adj = new HashMap<>();
+
+for (int[] pre : prerequisites) {
+    int course = pre[0], prereq = pre[1];
+    adj.computeIfAbsent(prereq, k -> new ArrayList<>()).add(course);  // prereq → course
+    inDegree[course]++;
+}
 
 Queue<Integer> queue = new LinkedList<>();
-for (int i = 0; i < n; i++) if (inDegree[i] == 0) queue.offer(i);  // start with no deps
+for (int i = 0; i < numCourses; i++) {
+    if (inDegree[i] == 0) queue.add(i);
+}
 
-List<Integer> order = new ArrayList<>();
+int processed = 0;
 while (!queue.isEmpty()) {
-    int node = queue.poll();
-    order.add(node);
-    for (int neighbor : graph.getOrDefault(node, new ArrayList<>())) {
-        if (--inDegree[neighbor] == 0) queue.offer(neighbor);
+    int curr = queue.poll();
+    processed++;
+    for (int next : adj.getOrDefault(curr, Collections.emptyList())) {
+        if (--inDegree[next] == 0) queue.add(next);
     }
 }
 
-// Cycle check: if order.size() != n → cycle exists (some nodes never reached inDegree 0)
-return order.size() == n;
+// Cycle check: processed != numCourses → cycle exists (nodes in cycle never reach inDegree 0)
+return processed == numCourses;
 ```
 
-⚠️ Watch out: if `order.size() < n` after BFS, a cycle exists — nodes in the cycle never reach inDegree 0 so they're never enqueued.
+⚠️ Watch out: if `processed < numCourses` after BFS, a cycle exists — nodes in the cycle never reach inDegree 0 so they're never enqueued.
 
 ---
 
