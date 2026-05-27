@@ -1,7 +1,6 @@
-# Skill: SRS Interval Calculator
-# Reusable by: any prep folder with pattern cards (DSA, behavioral, HLD, LLD)
-# Loaded by: commands that need to calculate review intervals and assign review modes
-
+---
+name: srs-revision-coach
+description: SRS interval calculator and review mode assignment for spaced repetition pattern cards. Use when running /review-dsa, calculating next review dates, assigning Full/Snippet/Blitz review modes, or when Sprint Mode rules are needed.
 ---
 
 ## Stage → Base Interval
@@ -33,17 +32,6 @@ Given card state, assign Full, Snippet, or Blitz:
 - Stage 5–6 → Blitz
 - Graduated → Blitz
 
-## Cheatsheet Prime
-Full mode only → before showing problem, look up card's Pattern Tag in @notes/cheatsheets/cheatsheet-index.md, output one line: `📖 [tag] → [file] § [section]`. No content dump.
-Snippet/Blitz → skip.
-
-## Snippet Mode — What It Means
-Snippet mode = boilerplate as comments + full code only for tricky parts.
-- User writes the overall structure/flow as comments (skeleton)
-- User writes full code only for the sections listed in the card's Watch Out For
-- Reviewer verifies: comments show correct understanding of flow AND code snippets are correct
-- Rating applies to both combined
-
 ## SRS Tracking Block (required on every card)
 ```
 ## SRS Tracking
@@ -64,28 +52,11 @@ Review Count: [increment by 1]
 Graduated: [Yes if Stage just hit 6 with Strong, otherwise No]
 ```
 
-## Timeout Rule
-If the user goes quiet for 3+ minutes during a review problem, prompt once: "Still working on it?"
-If stuck or no response → rate Blank, show full card immediately, move on. One prompt only.
+## Bail-Out Triggers
+If I say `timeout`, `blank`, or `no clue` at any point during a problem → rate Blank, show full card immediately, move on.
 
-## Sprint Mode (Stage 1 and Stage 2 only)
-Sprint = first 2 SRS review cycles after a weak solve. Announce "🏃 Sprint active" at start of each sprint review.
 
-| Stage at review | Sprint label       | Mode used | Task                                                              |
-|-----------------|--------------------|-----------|-------------------------------------------------------------------|
-| Stage 1         | Sprint Day+1       | Full      | Explain core insight + approach cold. No notes, no cheatsheet.   |
-| Stage 2         | Sprint Day+3       | Snippet   | Write full Java boilerplate cold. No peeking at card or cheatsheet. |
 
-- Pass (Okay or Strong) → bump Stage normally per SRS intervals
-- Fail (Weak or Blank) → stay at same Stage, Review Date = today + 1, retry tomorrow
-- Missed sprint (overdue) → run sprint review now, no penalty for lateness
-
-## Overdue Triage
-Any problem overdue 3+ days → force Blitz mode regardless of Stage or Last Rating.
-Goal: clear the debt fast. Correct core-insight recall counts as Okay minimum.
-Exception: Stage 1 or Stage 2 → Sprint Mode takes priority over Blitz. Never skip sprint.
-
-## Double-Strong Fast-Track (Stage 3 only)
-If a Stage 3 problem was rated Strong last review AND is rated Strong again now → advance to Stage 4 immediately.
-Do not wait for the remaining 10-day cycle. Update Stage in both the card and REVIEW.md.
-Check: if Last Rating = Strong before this review, current Strong = fast-track.
+## Mode Execution
+See [REFERENCE.md](REFERENCE.md) for Full / Snippet / Blitz step-by-step execution,
+Cheatsheet Prime, Sprint Mode, Overdue Triage, and Double-Strong Fast-Track rules.

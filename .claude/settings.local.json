@@ -22,7 +22,8 @@
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
       "Bash(gh pr *)",
-      "Skill(caveman)"
+      "Skill(caveman)",
+      "Skill(write-a-skill)"
     ]
   }
 }
