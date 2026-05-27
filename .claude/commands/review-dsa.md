@@ -14,7 +14,7 @@ Hard cap: 5 problems per session. No exceptions.
 Priority order:
 1. Blank rating (Full mode)
 2. Weak rating (Full mode)
-3. Overdue 3+ days (force Blitz regardless of Stage — see Overdue Triage rule in SKILL.md)
+3. Overdue 3+ days (force Blitz regardless of Stage — see Overdue Triage rule in REFERENCE.md)
 4. Overdue 1-2 days (normal mode assignment)
 5. Due today (normal mode assignment)
 Max 2 per pattern tag.
@@ -35,50 +35,20 @@ Remaining due: X more — next session.
 Ask: "Ready? Starting with #1."
 
 ## Step 4 — Per Problem
-
-Full mode:
-- Show problem name and problem link only. No tag, no card yet.
-- Wait for recall attempt.
-- "hint" → one nudge, direction only, no algorithm name
-- "blank" → mark Blank, show card immediately, move on
-- "give me a test case" or any request for a test case → ALWAYS use the exact test case from the card's Dry Run section. Never invent one.
-- After attempt: ask "What's the time and space complexity?" — wait for answer, then reveal card, compare what was right vs missed, factor complexity into rating
-
-Snippet mode:
-- Show problem name and problem link only. No tag, nothing else.
-- Prompt: "Write comments for parts you know cold + full code for parts you think are tricky."
-- "blank" → mark Blank, show full card, move on
-- After attempt:
-  - Verify comments are correct
-  - Verify code snippets are correct
-  - If a critical part has no comment AND no code → ask user to cover it before rating
-  - Ask "What's the time and space complexity?" — wait for answer
-  - Once coverage + complexity are complete and correct → rate immediately, no follow-up
-- If comments are wrong on flow → Weak regardless of code
-- If critical code snippet has a bug → Okay at best, Weak if severe
-- Wrong complexity with correct code → cap at Okay
-- If submission is complete and correct → rate immediately and move on
-
-Blitz mode:
-- Show: "Problem: [name] — [tag] · Core insight in one sentence: ___?"
-- "yes" → follow up: "Time and space?" — correct → Strong, next problem instantly; wrong → Okay
-- "no" → show core insight from card, Blank, move on
-- No pseudocode, no discussion
+Load card from @notes/[file]-solved.md before starting each problem.
+Run mode per @.claude/skills/srs-revision-coach/REFERENCE.md — follow mode steps exactly.
+Mode determines: what to show, when to show it, how to rate, when to move on.
 
 After every problem output:
 ```
 Rating: [✅/🟡/🔴/❌]
-✅ Got: ...
-❌ Missed: ...
+✅ Got: ...  ❌ Missed: ...
 Next review: YYYY-MM-DD (Stage X → Y)
-Update @dsa-prep/notes/[file].md: Stage / Review Date / Last Rating / Review Count
-Update @dsa-prep/notes/REVIEW.md: same row — Stage / Review Date / Last Rating / Review Count
+Update @notes/[file]-solved.md: Stage / Review Date / Last Rating / Review Count
+Update @notes/REVIEW.md: same row
+📄 Card: @notes/[file].md — say "move on" to continue.
 ```
-
-Then always show:
-📄 Card: @notes/[file].md — say "move on" to continue, or review the card first.
-
-Wait for "move on" before starting the next problem.
+Wait for "move on" before starting next problem.
 
 ## Initial Stage for Newly Solved Problems
 When saving a card after a first solve (not a review), set Stage based on MAANG rating:
