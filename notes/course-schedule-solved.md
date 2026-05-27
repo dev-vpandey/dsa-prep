@@ -65,7 +65,7 @@ return processed == numCourses
 
 ## Watch Out For
 - pair[0] = course, pair[1] = prereq (easy to swap variable names)
-- Use getOrDefault when using computeIfAbsent (missing keys for sink nodes)
+- Use getOrDefault for sink nodes — a node never appears in adj if no other course lists it as a prereq (e.g. node 3 in [[1,0],[2,1],[3,2]]). Nothing to do with n; purely about whether it ever appeared as prereq.
 - Graph may be disconnected — outer for loop handles all components
 
 ## Dry Run
