@@ -9,8 +9,8 @@
 
 | File | Problem | Tag | Stage | Review Date | Last Rating | Review Count | Graduated |
 |---|---|---|---|---|---|---|---|
-| move-zeroes-solved.md | Move Zeroes | two-pointer / in-place | 5 | 2026-05-08 | Strong | 8 | No |
-| reverse-linked-list-solved.md | Reverse Linked List | three-pointer / iterative | 5 | 2026-05-08 | Strong | 8 | No |
+| move-zeroes-solved.md | Move Zeroes | two-pointer / in-place | 6 | 2026-08-05 | Strong | 9 | Yes |
+| reverse-linked-list-solved.md | Reverse Linked List | three-pointer / iterative | 6 | 2026-08-05 | Strong | 9 | Yes |
 | middle-of-linked-list-solved.md | Middle of Linked List | slow-fast pointer | 5 | 2026-05-08 | Strong | 8 | No |
 | linked-list-cycle-solved.md | Linked List Cycle | Floyd's cycle detection | 5 | 2026-05-08 | Strong | 8 | No |
 | valid-parentheses-solved.md | Valid Parentheses | stack / matching | 5 | 2026-05-08 | Strong | 8 | No |
@@ -73,7 +73,7 @@
 | search-insert-position-solved.md | Search Insert Position | binary-search / lower-bound | 3 | 2026-05-01 | Okay | 4 | No |
 | pacific-atlantic-water-flow-solved.md | Pacific Atlantic Water Flow | multi-source-bfs / reverse-flow | 3 | 2026-04-26 | Okay | 2 | No |
 | surrounded-regions-solved.md | Surrounded Regions | multi-source-bfs / boundary-seed | 3 | 2026-04-22 | Okay | 3 | No |
-| course-schedule-solved.md | Course Schedule | topological-sort / kahn's / cycle-detection | 1 | 2026-04-22 | Weak | 4 | No |
+| course-schedule-solved.md | Course Schedule | topological-sort / kahn's / cycle-detection | 1 | 2026-05-30 | Okay | 5 | No |
 | graph-valid-tree-solved.md | Graph Valid Tree | dfs / union-find / cycle-detection | 4 | 2026-04-26 | Strong | 3 | No |
 | remove-nth-node-from-end-solved.md | Remove Nth Node from End | dummy node / advance fast n+1 | 3 | 2026-04-20 | Okay | 2 | No |
 | flatten-binary-tree-to-linked-list-solved.md | Flatten Binary Tree to Linked List | tree / rightmost-of-left | 3 | 2026-04-20 | Okay | 2 | No |
@@ -102,5 +102,5 @@
 | product-of-array-except-self-solved.md | Product of Array Except Self | prefix-product / two-pass | 3 | 2026-04-24 | Okay | 3 | No |
 | walls-and-gates-solved.md | Walls and Gates | multi-source-bfs / matrix | 3 | 2026-04-11 | Strong | 2 | No |
 | vertical-order-traversal-solved.md | Vertical Order Traversal | bfs / treemap / column-tracking | 3 | 2026-04-11 | Okay | 3 | No |
-| redundant-connection-solved.md | Redundant Connection | union-find | 1 | 2026-04-25 | Okay | 1 | No |
-| dijkstras-shortest-path-solved.md | Dijkstra's Shortest Path | graph / dijkstra / min-heap | 1 | 2026-04-19 | — | 0 | No |
+| redundant-connection-solved.md | Redundant Connection | union-find | 1 | 2026-05-30 | Blank | 2 | No |
+| dijkstras-shortest-path-solved.md | Dijkstra's Shortest Path | graph / dijkstra / min-heap | 2 | 2026-05-31 | Strong | 1 | No |

@@ -5,9 +5,9 @@ Pattern Tag: union-find
 
 ## SRS Tracking
 - Stage: 1
-- Review Date: 2026-03-30
-- Last Rating: Okay
-- Review Count: 1
+- Review Date: 2026-05-30
+- Last Rating: Blank
+- Review Count: 2
 - Graduated: No
 
 ---
