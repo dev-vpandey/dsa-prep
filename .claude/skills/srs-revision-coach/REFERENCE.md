@@ -28,7 +28,7 @@ Snippet = boilerplate as comments + full code only for tricky parts.
    - Complete and correct → rate immediately and move on.
 
 ## Blitz Mode — Step by Step
-1. Show: "Problem: [name] — [tag] · Core insight in one sentence: ___?"
+1. Show problem name and problem link. Then: "Problem: [name] — [tag] · Core insight in one sentence: ___?"
 2. "yes" → follow up: "Time and space?" — correct → Strong, next problem instantly; wrong → Okay.
 3. "no" → show core insight from card, Blank, move on.
 4. No pseudocode, no discussion.

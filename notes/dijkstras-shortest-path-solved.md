@@ -5,9 +5,9 @@ Pattern Tag: graph / dijkstra / min-heap
 
 ## SRS Tracking
 - Stage: 1
-- Review Date: 2026-04-05
-- Last Rating: —
-- Review Count: 0
+- Review Date: 2026-06-02
+- Last Rating: Okay
+- Review Count: 1
 - Graduated: No
 
 ---
@@ -85,6 +85,8 @@ You must examine every edge at least once and each heap operation costs O(log V)
 ## Watch Out For
 - `distances[start] = 0` not `distances[0]` — easy to hardcode wrong
 - Visited check fires on **poll**, not on offer — stale entries are discarded lazily
+  - Why: marking visited on *offer* settles a node before processing it. A→B(10), A→C(1), C→B(1): offering B marks it visited immediately, so when C is polled and tries to update B via path=2, B is already "settled" at 10. Result: B=10 instead of 2.
+  - Rule: a node is only settled when *polled* — that's when you know no shorter path can arrive.
 - Distance check before offering — without it heap grows to O(E) and you get O(E log E)
 - Unreachable nodes stay at `MAX_VALUE` — return `-1` for these in the result
 - Comparator `(a, b) -> a.dist - b.dist` can overflow for large weights — use `Integer.compare(a.dist, b.dist)` to be safe
