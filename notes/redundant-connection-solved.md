@@ -5,9 +5,9 @@ Pattern Tag: union-find
 
 ## SRS Tracking
 - Stage: 1
-- Review Date: 2026-03-30
-- Last Rating: Okay
-- Review Count: 1
+- Review Date: 2026-06-03
+- Last Rating: Blank
+- Review Count: 2
 - Graduated: No
 
 ---
@@ -64,6 +64,7 @@ union(x, y):
 - `rank[rootX]++` not `rank[x]++` — increment the root's rank, not the original node
 - Compare `rank[rootX] < rank[rootY]`, not node values `rootX < rootY`
 - Array size must be `n+1` since nodes are 1-indexed
+- `parent[a] = b` means a goes UNDER b (b is the boss/root). So `parent[rootY] = rootX` puts rootY under rootX → rootX gets taller → `rank[rootX]++` is correct.
 
 ## Dry Run
 Input: `[[1,2],[1,3],[2,3]]`

@@ -5,9 +5,9 @@ Pattern Tag: graph / dijkstra / min-heap
 
 ## SRS Tracking
 - Stage: 1
-- Review Date: 2026-04-05
-- Last Rating: —
-- Review Count: 0
+- Review Date: 2026-06-02
+- Last Rating: Okay
+- Review Count: 1
 - Graduated: No
 
 ---
