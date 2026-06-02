@@ -9,8 +9,8 @@
 
 | File | Problem | Tag | Stage | Review Date | Last Rating | Review Count | Graduated |
 |---|---|---|---|---|---|---|---|
-| move-zeroes-solved.md | Move Zeroes | two-pointer / in-place | 5 | 2026-05-08 | Strong | 8 | No |
-| reverse-linked-list-solved.md | Reverse Linked List | three-pointer / iterative | 5 | 2026-05-08 | Strong | 8 | No |
+| move-zeroes-solved.md | Move Zeroes | two-pointer / in-place | 6 | 2026-08-05 | Strong | 9 | Yes |
+| reverse-linked-list-solved.md | Reverse Linked List | three-pointer / iterative | 6 | 2026-08-05 | Strong | 9 | Yes |
 | middle-of-linked-list-solved.md | Middle of Linked List | slow-fast pointer | 5 | 2026-05-08 | Strong | 8 | No |
 | linked-list-cycle-solved.md | Linked List Cycle | Floyd's cycle detection | 5 | 2026-05-08 | Strong | 8 | No |
 | valid-parentheses-solved.md | Valid Parentheses | stack / matching | 5 | 2026-05-08 | Strong | 8 | No |
