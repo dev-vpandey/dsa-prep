@@ -104,3 +104,4 @@
 | vertical-order-traversal-solved.md | Vertical Order Traversal | bfs / treemap / column-tracking | 3 | 2026-04-11 | Okay | 3 | No |
 | redundant-connection-solved.md | Redundant Connection | union-find | 1 | 2026-06-03 | Blank | 2 | No |
 | dijkstras-shortest-path-solved.md | Dijkstra's Shortest Path | graph / dijkstra / min-heap | 1 | 2026-06-02 | Okay | 1 | No |
+| ransom-note-solved.md | Ransom Note | hashmap / frequency-count | 1 | 2026-06-04 | — | 0 | No |
