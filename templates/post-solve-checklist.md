@@ -4,6 +4,7 @@ Run this after the user solves a problem correctly (their own solution or after 
 
 ### 1. Fill the card
 - Fill out @templates/dsa-pattern-card.md with all sections complete
+- **Problem Link is REQUIRED** — always include the actual URL, never leave blank
 - Use YYYY-MM-DD format for ALL dates (Solved Date, Review Date)
 
 ### 2. Set SRS fields

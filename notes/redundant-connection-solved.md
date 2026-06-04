@@ -4,10 +4,10 @@ Solved Date: 2026-03-28
 Pattern Tag: union-find
 
 ## SRS Tracking
-- Stage: 1
-- Review Date: 2026-06-03
-- Last Rating: Blank
-- Review Count: 2
+- Stage: 2
+- Review Date: 2026-06-07
+- Last Rating: Strong
+- Review Count: 3
 - Graduated: No
 
 ---

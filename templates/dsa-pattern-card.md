@@ -6,7 +6,7 @@
 ---
 
 # [Problem Name] — [Difficulty]
-Problem Link: [navigable link]
+Problem Link: [navigable link]  <!-- REQUIRED — never leave blank -->
 Solved Date: [YYYY-MM-DD]
 Pattern Tag: [e.g. sliding-window / two-pointer / bfs / dp-1d / monotonic-stack]
 
