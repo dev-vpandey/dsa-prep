@@ -73,7 +73,7 @@
 | search-insert-position-solved.md | Search Insert Position | binary-search / lower-bound | 3 | 2026-05-01 | Okay | 4 | No |
 | pacific-atlantic-water-flow-solved.md | Pacific Atlantic Water Flow | multi-source-bfs / reverse-flow | 3 | 2026-04-26 | Okay | 2 | No |
 | surrounded-regions-solved.md | Surrounded Regions | multi-source-bfs / boundary-seed | 3 | 2026-04-22 | Okay | 3 | No |
-| course-schedule-solved.md | Course Schedule | topological-sort / kahn's / cycle-detection | 2 | 2026-06-03 | Strong | 5 | No |
+| course-schedule-solved.md | Course Schedule | topological-sort / kahn's / cycle-detection | 3 | 2026-06-14 | Strong | 6 | No |
 | graph-valid-tree-solved.md | Graph Valid Tree | dfs / union-find / cycle-detection | 4 | 2026-04-26 | Strong | 3 | No |
 | remove-nth-node-from-end-solved.md | Remove Nth Node from End | dummy node / advance fast n+1 | 3 | 2026-04-20 | Okay | 2 | No |
 | flatten-binary-tree-to-linked-list-solved.md | Flatten Binary Tree to Linked List | tree / rightmost-of-left | 3 | 2026-04-20 | Okay | 2 | No |
@@ -102,6 +102,6 @@
 | product-of-array-except-self-solved.md | Product of Array Except Self | prefix-product / two-pass | 3 | 2026-04-24 | Okay | 3 | No |
 | walls-and-gates-solved.md | Walls and Gates | multi-source-bfs / matrix | 3 | 2026-06-12 | Okay | 3 | No |
 | vertical-order-traversal-solved.md | Vertical Order Traversal | bfs / treemap / column-tracking | 3 | 2026-04-11 | Okay | 3 | No |
-| redundant-connection-solved.md | Redundant Connection | union-find | 1 | 2026-06-03 | Blank | 2 | No |
-| dijkstras-shortest-path-solved.md | Dijkstra's Shortest Path | graph / dijkstra / min-heap | 1 | 2026-06-02 | Okay | 1 | No |
+| redundant-connection-solved.md | Redundant Connection | union-find | 2 | 2026-06-07 | Strong | 3 | No |
+| dijkstras-shortest-path-solved.md | Dijkstra's Shortest Path | graph / dijkstra / min-heap | 2 | 2026-06-06 | Strong | 2 | No |
 | ransom-note-solved.md | Ransom Note | hashmap / frequency-count | 1 | 2026-06-04 | — | 0 | No |
