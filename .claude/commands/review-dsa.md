@@ -7,6 +7,9 @@ Ask: "Done a new problem today? (Recommended: do one first before reviews.)"
 Ask: "How much time do you have? (minutes)"
 Read @dsa-prep/notes/REVIEW.md and @dsa-prep/notes/GAP-DRILLS.md.
 If GAP-DRILLS.md has open gaps, show them before the session plan so the user is aware.
+  - For each open gap, grep the relevant solved note file(s) for "Problem Link" and include the URL in the gap table.
+  - Column order: Pattern | Type | Drill | Problem Link | Status
+  - If gap references no specific problem (generic drill), omit the link column value but keep the column.
 Flag any card whose row is missing required fields before proceeding.
 
 ## Step 2 — Build Queue

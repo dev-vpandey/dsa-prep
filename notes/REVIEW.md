@@ -102,6 +102,6 @@
 | product-of-array-except-self-solved.md | Product of Array Except Self | prefix-product / two-pass | 3 | 2026-04-24 | Okay | 3 | No |
 | walls-and-gates-solved.md | Walls and Gates | multi-source-bfs / matrix | 3 | 2026-06-12 | Okay | 3 | No |
 | vertical-order-traversal-solved.md | Vertical Order Traversal | bfs / treemap / column-tracking | 3 | 2026-04-11 | Okay | 3 | No |
-| redundant-connection-solved.md | Redundant Connection | union-find | 2 | 2026-06-07 | Strong | 3 | No |
+| redundant-connection-solved.md | Redundant Connection | union-find | 3 | 2026-06-17 | Strong | 4 | No |
 | dijkstras-shortest-path-solved.md | Dijkstra's Shortest Path | graph / dijkstra / min-heap | 2 | 2026-06-06 | Strong | 2 | No |
-| ransom-note-solved.md | Ransom Note | hashmap / frequency-count | 1 | 2026-06-04 | — | 0 | No |
+| ransom-note-solved.md | Ransom Note | hashmap / frequency-count | 1 | 2026-06-09 | Okay | 1 | No |
