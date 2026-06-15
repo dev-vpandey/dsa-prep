@@ -5,9 +5,9 @@ Pattern Tag: graph / dijkstra / min-heap
 
 ## SRS Tracking
 - Stage: 2
-- Review Date: 2026-06-06
-- Last Rating: Strong
-- Review Count: 2
+- Review Date: 2026-06-17
+- Last Rating: Okay
+- Review Count: 3
 - Graduated: No
 
 ---
@@ -103,6 +103,59 @@ Poll (3,7)  → all neighbors visited
 Poll (4,8)  → all neighbors visited
 Result: [0, 4, 3, 7, 8, -1]
 ```
+
+## Variant — Network Delay Time (LeetCode 743)
+Problem Link: https://leetcode.com/problems/network-delay-time/
+
+**Differences from base:**
+- Directed graph → one-way edges only (drop the reverse `adjList.computeIfAbsent(b, ...)` line)
+- 1-indexed nodes → `int[] distances = new int[n + 1]`
+- Return `max(distances[1..n])` — "all nodes received" = last node to be reached
+- Stale-check without visited set: `if (currTime > distances[currNode]) continue;`
+
+```java
+class Solution {
+    public int networkDelayTime(int[][] times, int n, int k) {
+        Map<Integer, List<Edge>> graph = new HashMap<>();
+        for (int[] time : times) {
+            int a = time[0], b = time[1], c = time[2];
+            graph.computeIfAbsent(a, v -> new ArrayList<>()).add(new Edge(b, c));
+        }
+
+        int[] distances = new int[n + 1];
+        Arrays.fill(distances, Integer.MAX_VALUE);
+        distances[k] = 0;
+
+        PriorityQueue<Edge> minHeap = new PriorityQueue<>((a, b) -> Integer.compare(a.time, b.time));
+        minHeap.offer(new Edge(k, 0));
+
+        while (!minHeap.isEmpty()) {
+            var curr = minHeap.poll();
+            int currNode = curr.node, currTime = curr.time;
+            if (currTime > distances[currNode]) continue;  // stale check — no visited set needed
+
+            for (var nbr : graph.getOrDefault(currNode, Collections.emptyList())) {
+                int newTime = currTime + nbr.time;
+                if (newTime < distances[nbr.node]) {
+                    distances[nbr.node] = newTime;
+                    minHeap.offer(new Edge(nbr.node, newTime));
+                }
+            }
+        }
+
+        int max = 0;
+        for (int i = 1; i <= n; i++) {
+            if (distances[i] == Integer.MAX_VALUE) return -1;
+            max = Math.max(max, distances[i]);
+        }
+        return max;
+    }
+
+    record Edge(int node, int time) {}
+}
+```
+
+**Stale-check vs visited set:** Both are correct. `currTime > distances[currNode]` skips a poll if a shorter path already settled this node. The visited set does the same via explicit membership tracking. Stale-check is slightly leaner — no set allocation.
 
 ## Boiler Plate Template
 

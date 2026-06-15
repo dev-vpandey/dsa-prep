@@ -5,10 +5,10 @@ Pattern Tag: topological-sort / kahn's-algorithm / cycle-detection / directed-gr
 Review Date: 2026-03-25
 
 ## SRS Tracking
-- Stage: 3
-- Review Date: 2026-06-14
+- Stage: 4
+- Review Date: 2026-07-16
 - Last Rating: Strong
-- Review Count: 6
+- Review Count: 7
 - Graduated: No
 
 ## Real World Analogy
