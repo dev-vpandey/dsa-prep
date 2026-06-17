@@ -100,8 +100,8 @@
 | clone-graph-solved.md | Clone Graph | graph / bfs / hashmap | 3 | 2026-04-20 | Okay | 2 | No |
 | min-heap-construction-solved.md | Min Heap Construction | heap / design / sift-down | 3 | 2026-04-20 | Okay | 2 | No |
 | product-of-array-except-self-solved.md | Product of Array Except Self | prefix-product / two-pass | 3 | 2026-04-24 | Okay | 3 | No |
-| walls-and-gates-solved.md | Walls and Gates | multi-source-bfs / matrix | 4 | 2026-06-29 | Strong | 4 | No |
+| walls-and-gates-solved.md | Walls and Gates | multi-source-bfs / matrix | 4 | 2026-07-02 | Strong | 4 | No |
 | vertical-order-traversal-solved.md | Vertical Order Traversal | bfs / treemap / column-tracking | 3 | 2026-04-11 | Okay | 3 | No |
 | redundant-connection-solved.md | Redundant Connection | union-find | 3 | 2026-06-17 | Strong | 4 | No |
-| dijkstras-shortest-path-solved.md | Dijkstra's Shortest Path | graph / dijkstra / min-heap | 2 | 2026-06-17 | Okay | 3 | No |
-| ransom-note-solved.md | Ransom Note | hashmap / frequency-count | 2 | 2026-06-16 | Strong | 2 | No |
+| dijkstras-shortest-path-solved.md | Dijkstra's Shortest Path | graph / dijkstra / min-heap | 3 | 2026-06-22 | Strong | 3 | No |
+| ransom-note-solved.md | Ransom Note | hashmap / frequency-count | 1 | 2026-06-18 | Okay | 2 | No |

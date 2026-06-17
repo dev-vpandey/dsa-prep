@@ -14,6 +14,14 @@ Revision and SRS logic are handled separately via /review — never mix the two 
 1. New problem first (30-40 min) — use `/start` to find what's next
 2. Reviews after — `/review-dsa` handles up to 5, no more
 
+## OA Prep Override
+If `@notes/capital-one-oa-prep.md` exists and today's date is on or before the "Active:" date in that file:
+- Read it in full before starting any `/review-dsa` session.
+- Replace the standard SRS priority queue with the Capital One queue rules from that file's "Review Coach Instructions" section.
+- Announce: "📋 Capital One OA mode active — queue tuned to OA problem list."
+- After the session, remind which non-deck cold-solve problems are due today per the file's 3-day schedule.
+Once the active date passes, ignore the file and return to standard SRS priority.
+
 ## Pattern Card Template
 - When saving a solved problem, always use @templates/dsa-pattern-card.md.
 - Save the completed card to @notes/[problem-name]-solved.md.
