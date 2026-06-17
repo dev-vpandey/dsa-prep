@@ -1,0 +1,28 @@
+{
+  // --- Copilot: no ghost text / inline logic fills ---
+  "github.copilot.editor.enableAutoCompletions": false,
+  "github.copilot.inlineSuggest.enable": false,
+
+  // --- No auto-popup suggestions (like LeetCode/HackerRank) ---
+  // Manual Ctrl+Space still works
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "off"
+  },
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.wordBasedSuggestions": "currentDocument",
+  "editor.parameterHints.enabled": false,
+
+  // --- Keep these ON so manual Ctrl+Space shows useful basics ---
+  "editor.suggest.showMethods": true,
+  "editor.suggest.showFunctions": true,
+  "editor.suggest.showConstructors": true,
+  "editor.suggest.showVariables": true,
+  "editor.suggest.showClasses": true,
+  "editor.suggest.showInterfaces": true,
+  "editor.suggest.showModules": true,
+  "editor.suggest.showProperties": true,
+  "editor.suggest.showKeywords": true,
+  "editor.suggest.showSnippets": false
+}
