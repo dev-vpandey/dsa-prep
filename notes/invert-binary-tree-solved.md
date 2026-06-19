@@ -4,11 +4,11 @@ Solved Date: 2026-03-24
 Pattern Tag: tree / dfs / recursion / swap
 
 ## SRS Tracking
-- Stage: 5
-- Review Date: 2026-04-23
+- Stage: 6
+- Review Date: 2026-08-26
 - Last Rating: Strong
-- Review Count: 8
-- Graduated: No
+- Review Count: 9
+- Graduated: Yes
 
 ---
 
@@ -79,16 +79,37 @@ After invert:
 ```
 
 ## Boilerplate Template
+
+**Post-order (card original)** — recurse first, swap on return:
 ```java
 class Solution {
     public TreeNode invertTree(TreeNode root) {
         if (root == null) return null;
-        // invert both subtrees first, then swap
         TreeNode left = invertTree(root.left);
         TreeNode right = invertTree(root.right);
         root.left = right;
         root.right = left;
         return root;
+    }
+}
+```
+
+**Pre-order (helper style)** — swap first, then recurse. Easier to narrate in interviews:
+```java
+class Solution {
+    public TreeNode invertTree(TreeNode root) {
+        if (root == null) return null;
+        swap(root);
+        return root;
+    }
+
+    private void swap(TreeNode node) {
+        if (node == null) return;
+        TreeNode temp = node.left;
+        node.left = node.right;
+        node.right = temp;
+        swap(node.left);
+        swap(node.right);
     }
 }
 ```

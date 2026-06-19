@@ -5,9 +5,9 @@ Pattern Tag: stack / matching / bracket-validation
 
 ## SRS Tracking
 - Stage: 5
-- Review Date: 2026-04-23
-- Last Rating: Strong
-- Review Count: 8
+- Review Date: 2026-08-02
+- Last Rating: Okay
+- Review Count: 9
 - Graduated: No
 
 ---
@@ -19,17 +19,17 @@ Like checking if all open folders on a computer have matching close operations �
 Push open brackets onto a stack. On every closing bracket, the top of the stack must be its matching open bracket. Stack must be empty at the end.
 
 ## Approach
-Use a stack and a map from closing → opening brackets. For each character: if open bracket, push it; if closing, check if stack top matches — if not, return false. After loop, stack must be empty.
+Use a stack and a map from opening → closing brackets. For each character: if `containsKey(c)` it's an open bracket → push; else it's closing → check `bmap.get(stack.peek()).equals(c)`, pop if match else return false. After loop, stack must be empty.
 
 ## Mental Model
 ```
 ┌──────────────────────────────────┬───────────────────────────────────────────┐
 │ Decision                         │ Why                                       │
 ├──────────────────────────────────┼───────────────────────────────────────────┤
-│ Map closing → opening            │ Clean lookup: when you see ')', check if  │
-│ ')' → '(', ']' → '[', '}' → '{' │ top == '('. No if-else chains.            │
+│ Map open → closing               │ containsKey(c) tells you it's an open     │
+│ '(' → ')', '[' → ']', '{' → '}' │ bracket — avoids NPE on closing keys      │
 ├──────────────────────────────────┼───────────────────────────────────────────┤
-│ Check stack empty before pop     │ "]" or ")..." with empty stack → false    │
+│ Check stack empty before peek    │ "]" or ")..." with empty stack → false    │
 │                                  │ avoids EmptyStackException                │
 ├──────────────────────────────────┼───────────────────────────────────────────┤
 │ Stack must be empty at end       │ "((" is invalid — unclosed brackets must  │
@@ -40,11 +40,11 @@ Use a stack and a map from closing → opening brackets. For each character: if 
 ## Pseudocode
 ```
 stack = []
-map = {')':'(', ']':'[', '}':'{'}
+map = {'(':')', '[':']', '{':'}'}
 for each char c in s:
-    if c is open bracket: push c
+    if map.containsKey(c): push c       // open bracket
     else:
-        if stack is empty OR stack.top != map[c]: return false
+        if stack empty OR map.get(stack.peek()) != c: return false
         pop stack
 return stack.isEmpty()
 ```
@@ -76,15 +76,14 @@ import java.util.*;
 
 class Solution {
     public boolean isValid(String s) {
-        Deque<Character> stack = new ArrayDeque<>();
-        Map<Character, Character> map = Map.of(')', '(', ']', '[', '}', '{');
+        Map<Character, Character> bmap = Map.of('(', ')', '{', '}', '[', ']');
+        Stack<Character> stack = new Stack<>();
+
         for (char c : s.toCharArray()) {
-            if (map.containsKey(c)) {
-                // closing bracket — check match
-                if (stack.isEmpty() || stack.peek() != map.get(c)) return false;
-                stack.pop();
-            } else {
-                stack.push(c);
+            if (bmap.containsKey(c)) stack.push(c);
+            else {
+                if (!stack.isEmpty() && bmap.get(stack.peek()).equals(c)) stack.pop();
+                else return false;
             }
         }
         return stack.isEmpty();

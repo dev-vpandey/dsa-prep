@@ -11,11 +11,11 @@
 |---|---|---|---|---|---|---|---|
 | move-zeroes-solved.md | Move Zeroes | two-pointer / in-place | 6 | 2026-08-05 | Strong | 9 | Yes |
 | reverse-linked-list-solved.md | Reverse Linked List | three-pointer / iterative | 6 | 2026-08-05 | Strong | 9 | Yes |
-| middle-of-linked-list-solved.md | Middle of Linked List | slow-fast pointer | 5 | 2026-05-08 | Strong | 8 | No |
-| linked-list-cycle-solved.md | Linked List Cycle | Floyd's cycle detection | 5 | 2026-05-08 | Strong | 8 | No |
-| valid-parentheses-solved.md | Valid Parentheses | stack / matching | 5 | 2026-05-08 | Strong | 8 | No |
-| invert-binary-tree-solved.md | Invert Binary Tree | dfs / swap | 5 | 2026-05-08 | Strong | 8 | No |
-| max-depth-binary-tree-solved.md | Max Depth Binary Tree | dfs / recursion | 5 | 2026-05-08 | Strong | 8 | No |
+| middle-of-linked-list-solved.md | Middle of Linked List | slow-fast pointer | 6 | 2026-08-05 | Strong | 9 | Yes |
+| linked-list-cycle-solved.md | Linked List Cycle | Floyd's cycle detection | 6 | 2026-08-25 | Strong | 9 | Yes |
+| valid-parentheses-solved.md | Valid Parentheses | stack / matching | 5 | 2026-08-02 | Okay | 9 | No |
+| invert-binary-tree-solved.md | Invert Binary Tree | dfs / swap | 6 | 2026-08-26 | Strong | 9 | Yes |
+| max-depth-binary-tree-solved.md | Max Depth Binary Tree | dfs / recursion | 6 | 2026-08-26 | Strong | 9 | Yes |
 | same-tree-solved.md | Same Tree | structural dfs | 5 | 2026-05-08 | Strong | 8 | No |
 | logger-rate-limiter-solved.md | Logger Rate Limiter | hashmap / timestamp | 5 | 2026-05-08 | Strong | 8 | No |
 | moving-average-data-stream-solved.md | Moving Average from Data Stream | queue / running-sum | 5 | 2026-05-08 | Strong | 8 | No |
