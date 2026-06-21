@@ -60,17 +60,22 @@ sumRange(2,5) = prefix[6] - prefix[2] = −3 − (−2) = −1 ✓
 ## Boilerplate Template
 ```java
 class NumArray {
-    private final int[] prefix;
+    
+    List<Integer> prefixSums;
 
     public NumArray(int[] nums) {
-        prefix = new int[nums.length + 1]; // prefix[0] = 0 sentinel
-        for (int i = 0; i < nums.length; i++) {
-            prefix[i + 1] = prefix[i] + nums[i];
-        }
-    }
+        this.prefixSums = new ArrayList<>();
+        prefixSums.add(nums[0]); // Add the first element to thev prefix sums array
 
+        // loop from index 1 to n add i - 1 to i, example prefixSums.get(1 - 1) + nums[1]
+        for(var i = 1; i < nums.length; i++) prefixSums.add(prefixSums.get(i - 1)+ nums[i]);
+    }
+    
     public int sumRange(int left, int right) {
-        return prefix[right + 1] - prefix[left];
+        if(left == 0) // if the range starts from 0 always take the right
+            return prefixSums.get(right);
+        // if range is greater than 0 the right - (left - 1), left -1 is done to include the left range
+        return prefixSums.get(right) - prefixSums.get(left - 1);
     }
 }
 ```

@@ -49,6 +49,14 @@ for (Map.Entry<Integer, Integer> e : map.entrySet()) {
 Map<Character, Integer> freq = new HashMap<>();
 for (char c : s.toCharArray()) freq.merge(c, 1, Integer::sum);
 
+// Complement lookup (two-sum pattern) — store value→index, check complement before insert
+Map<Integer, Integer> seen = new HashMap<>();
+for (int i = 0; i < nums.length; i++) {
+    int complement = target - nums[i];
+    if (seen.containsKey(complement)) return new int[]{i, seen.get(complement)};
+    seen.put(nums[i], i);                                // insert AFTER check
+}
+
 // Prefix sum + HashMap (subarray sum = k)
 Map<Integer, Integer> prefixCount = new HashMap<>();
 prefixCount.put(0, 1);                                   // empty prefix
@@ -61,6 +69,50 @@ for (int num : nums) {
 ```
 
 ⚠️ Watch out: `getOrDefault` with a new list does NOT store it — use `computeIfAbsent` when you need to add to the list afterward.
+⚠️ Complement lookup: always check BEFORE inserting — prevents pairing element with itself.
+
+---
+
+## ── HASHSET ──────────────────────────────────────────────────────────────────
+# Real world: a bouncer's list — O(1) "is this person on the list?" with no duplicates allowed.
+
+```java
+Set<Integer> set = new HashSet<>();
+set.add(n);
+set.contains(n);   // O(1)
+set.remove(n);     // O(1) — returns true if element existed
+
+// Intersection — put SMALLER array in set, result Set deduplicates for free
+Set<Integer> set1 = new HashSet<>();
+for (int n : nums1) set1.add(n);
+Set<Integer> res = new HashSet<>();
+for (int n : nums2) if (set1.contains(n)) res.add(n);
+return res.stream().mapToInt(Integer::intValue).toArray();
+
+// Cycle detection — track visited states
+Set<Integer> seen = new HashSet<>();
+while (!seen.contains(n)) {
+    seen.add(n);
+    n = next(n);                                            // compute next state
+}
+// n now in seen → cycle detected
+
+// Sequence start — only count from smallest in chain (n-1 not in set)
+Set<Integer> set = new HashSet<>();
+for (int n : nums) set.add(n);
+int max = 0;
+for (int n : set) {                                        // iterate SET not array
+    if (!set.contains(n - 1)) {
+        int len = 1;
+        while (set.contains(++n)) len++;
+        max = Math.max(max, len);
+    }
+}
+```
+
+⚠️ Watch out: iterate over the **set**, not the original array — duplicates in array cause repeated counting.
+⚠️ Intersection result must be a Set, not List — List accumulates duplicates from nums2.
+⚠️ `List.toArray(new int[0])` won't compile — use `stream().mapToInt(Integer::intValue).toArray()`.
 
 ---
 
@@ -122,10 +174,10 @@ for (int right = 0; right < nums.length; right++) {
 
 ```java
 // Variable window — expand until invalid, shrink until valid again
-int left = 0, result = 0;
+int left = 0, right = 0, result = 0;
 Map<Character, Integer> freq = new HashMap<>();
 
-for (int right = 0; right < s.length(); right++) {
+while (right < s.length()) {
     freq.merge(s.charAt(right), 1, Integer::sum);        // expand right
 
     while (/* window invalid */) {                        // shrink left
@@ -134,6 +186,7 @@ for (int right = 0; right < s.length(); right++) {
         left++;
     }
     result = Math.max(result, right - left + 1);
+    right++;
 }
 
 // Fixed window — size k (frequency map variant)

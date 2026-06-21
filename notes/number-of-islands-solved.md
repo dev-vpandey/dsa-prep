@@ -5,9 +5,9 @@ Pattern Tag: graph / dfs / matrix / flood-fill / connected-components
 
 ## SRS Tracking
 - Stage: 4
-- Review Date: 2026-04-07
-- Last Rating: Strong
-- Review Count: 4
+- Review Date: 2026-07-01
+- Last Rating: Weak
+- Review Count: 5
 - Graduated: No
 
 ---
@@ -75,24 +75,32 @@ Result: 2 ✓
 ## Boilerplate Template
 ```java
 class Solution {
+    int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+    int rows, cols;
+
     public int numIslands(char[][] grid) {
-        int count = 0;
-        for (int r = 0; r < grid.length; r++) {
-            for (int c = 0; c < grid[0].length; c++) {
+        rows = grid.length;
+        cols = grid[0].length;
+        var islandCount = 0;
+
+        for (var r = 0; r < rows; r++) {
+            for (var c = 0; c < cols; c++) {
                 if (grid[r][c] == '1') {
-                    count++;
                     dfs(grid, r, c);
+                    islandCount++;
                 }
             }
         }
-        return count;
+        return islandCount;
     }
 
     private void dfs(char[][] grid, int r, int c) {
-        if (r < 0 || r >= grid.length || c < 0 || c >= grid[0].length || grid[r][c] != '1') return;
-        grid[r][c] = '0'; // mark as visited
-        dfs(grid, r + 1, c); dfs(grid, r - 1, c);
-        dfs(grid, r, c + 1); dfs(grid, r, c - 1);
+        if (r < 0 || c < 0 || r >= rows || c >= cols || grid[r][c] != '1') return;
+        grid[r][c] = '0';
+        for (int[] dir : directions) {
+            int nr = r + dir[0], nc = c + dir[1];
+            dfs(grid, nr, nc);
+        }
     }
 }
 ```

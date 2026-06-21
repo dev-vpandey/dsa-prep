@@ -4,11 +4,11 @@ Solved Date: 2026-03-24
 Pattern Tag: sliding-window / frequency-map / fixed-window
 
 ## SRS Tracking
-- Stage: 5
-- Review Date: 2026-07-03
+- Stage: 6
+- Review Date: 2026-08-27
 - Last Rating: Strong
-- Review Count: 6
-- Graduated: No
+- Review Count: 7
+- Graduated: Yes
 
 ---
 

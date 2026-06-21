@@ -4,11 +4,11 @@ Solved Date: 2026-03-24
 Pattern Tag: linked-list / Floyd / cycle-detection / slow-fast-pointer
 
 ## SRS Tracking
-- Stage: 5
-- Review Date: 2026-04-23
+- Stage: 6
+- Review Date: 2026-08-25
 - Last Rating: Strong
-- Review Count: 8
-- Graduated: No
+- Review Count: 9
+- Graduated: Yes
 
 ---
 
