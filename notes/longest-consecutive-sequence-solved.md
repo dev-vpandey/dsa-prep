@@ -4,10 +4,10 @@ Solved Date: 2026-03-24
 Pattern Tag: hashset / sequence-start / O(n)
 
 ## SRS Tracking
-- Stage: 3
-- Review Date: 2026-03-31
-- Last Rating: Okay
-- Review Count: 2
+- Stage: 1
+- Review Date: 2026-06-22
+- Last Rating: Weak
+- Review Count: 3
 - Graduated: No
 
 ---

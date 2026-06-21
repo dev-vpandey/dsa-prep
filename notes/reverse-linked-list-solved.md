@@ -5,9 +5,9 @@ Pattern Tag: linked-list / iterative / three-pointer
 
 ## SRS Tracking
 - Stage: 6
-- Review Date: 2026-08-05
+- Review Date: 2026-11-02
 - Last Rating: Strong
-- Review Count: 9
+- Review Count: 10
 - Graduated: Yes
 
 ---

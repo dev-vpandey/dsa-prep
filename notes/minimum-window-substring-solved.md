@@ -6,9 +6,9 @@ Review Date: 2026-03-08
 
 ## SRS Tracking
 - Stage: 3
-- Review Date: 2026-04-04
-- Last Rating: Okay
-- Review Count: 3
+- Review Date: 2026-06-26
+- Last Rating: Weak
+- Review Count: 4
 - Graduated: No
 
 ---
@@ -123,35 +123,34 @@ Result: s.substring(9, 9+4) = "BANC" ✓
 
 ## Boilerplate Template
 ```java
-import java.util.*;
-
 class Solution {
     public String minWindow(String s, String t) {
         Map<Character, Integer> tmap = new HashMap<>();
-        for (var c : t.toCharArray()) tmap.merge(c, 1, Integer::sum);
-
+        for (char c : t.toCharArray()) tmap.merge(c, 1, Integer::sum);
         int need = tmap.size(), formed = 0;
-        int left = 0, minStart = 0, minLength = Integer.MAX_VALUE;
-        Map<Character, Integer> smap = new HashMap<>();
 
-        for (int right = 0; right < s.length(); right++) {
-            char rc = s.charAt(right);
+        Map<Character, Integer> smap = new HashMap<>();
+        int left = 0, right = 0, minLength = Integer.MAX_VALUE, minStart = 0;
+
+        while (right < s.length()) {
+            var rc = s.charAt(right);
             smap.merge(rc, 1, Integer::sum);
-            if (tmap.containsKey(rc) && tmap.get(rc).equals(smap.get(rc)))
+            if (tmap.containsKey(rc) && smap.get(rc).equals(tmap.get(rc)))
                 formed++;
 
-            while (formed == need) {
-                int windowSize = right - left + 1;
-                if (windowSize < minLength) {
-                    minLength = windowSize;
+            while (need == formed) {
+                var winSize = right - left + 1;
+                if (winSize < minLength) {
                     minStart = left;
+                    minLength = winSize;
                 }
-                char lc = s.charAt(left);
+                var lc = s.charAt(left);
                 smap.merge(lc, -1, Integer::sum);
                 if (tmap.containsKey(lc) && smap.get(lc) < tmap.get(lc))
                     formed--;
                 left++;
             }
+            right++;
         }
 
         return minLength == Integer.MAX_VALUE ? "" : s.substring(minStart, minStart + minLength);

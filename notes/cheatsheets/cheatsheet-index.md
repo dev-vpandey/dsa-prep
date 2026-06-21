@@ -4,7 +4,11 @@
 ## G1 · Foundation  (group1-foundation.md)
 array, prefix sum, sort, fill               → § ARRAY
 hashmap, frequency, computeifabsent         → § HASHMAP
+complement lookup, two sum, target pair     → § HASHMAP              · two-sum-solved.md
 prefix sum + hashmap, subarray sum          → § HASHMAP              · subarray-sum-equals-k-solved.md
+hashset, intersection, two arrays           → § HASHSET              · intersection-of-two-arrays-solved.md
+hashset, cycle detection, seen tracking     → § HASHSET              · happy-number-solved.md
+hashset, sequence start, consecutive        → § HASHSET              · longest-consecutive-sequence-solved.md
 two pointer, opposite ends, slow fast       → § TWO POINTER
 sliding window, variable, fixed, anagram    → § SLIDING WINDOW
 intervals, merge, overlap, meeting rooms    → § INTERVALS
