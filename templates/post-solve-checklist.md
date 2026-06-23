@@ -34,7 +34,11 @@ Append a row to @notes/REVIEW.md:
 ### 7. 3-Problem Rule
 Count problems in @notes/REVIEW.md that share this pattern tag.
 - Tag matching = **broad/prefix match** — count any row whose tag starts with the same root word (e.g. `two-pointer`, `sliding-window`, `bfs`, `dfs`, `binary-search`). Sub-variants like `two-pointer / in-place` and `two-pointer / move shorter` both count toward the same root.
-- If < 3: announce "Pattern has X/3 problems. Here's your next one:" and immediately give an unseen problem from same tag.
+- If < 3:
+  1. Announce "Pattern has X/3 problems. Here's your next one:" and immediately give an unseen problem from same tag.
+  2. **Also add it to @notes/GAP-DRILLS.md as Open** (safety net if session ends before it's solved):
+     `| [tag] | Conceptual | Solve [Problem Name] ([LC link]) — [one line on what's different from today's problem] | Open | [today] |`
+  3. If the user solves it in the same session → mark that GAP-DRILLS row Closed immediately after the card is saved.
 - If ≥ 3: announce "Pattern solid at 3+ problems. Ready for a new pattern when you are."
 
 Always announce this — never wait for the user to ask.
