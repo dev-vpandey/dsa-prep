@@ -108,3 +108,4 @@
 | ransom-note-solved.md | Ransom Note | hashmap / frequency-count | 1 | 2026-06-18 | Okay | 2 | No |
 | intersection-of-two-arrays-solved.md | Intersection of Two Arrays | hashset / intersection | 1 | 2026-06-22 | — | 0 | No |
 | top-k-frequent-words-solved.md | Top K Frequent Words | heap / top-k / custom-comparator | 3 | 2026-06-28 | — | 0 | No |
+| connecting-cities-with-minimum-cost-solved.md | Connecting Cities with Minimum Cost | graph / mst / prim's | 1 | 2026-06-24 | — | 0 | No |
