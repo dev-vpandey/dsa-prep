@@ -4,10 +4,10 @@ Solved Date: 2026-06-20
 Pattern Tag: hashmap / complement-lookup
 
 ## SRS Tracking
-- Stage: 2
-- Review Date: 2026-06-23
-- Last Rating: —
-- Review Count: 0
+- Stage: 3
+- Review Date: 2026-06-28
+- Last Rating: Strong
+- Review Count: 1
 - Graduated: No
 
 ---

@@ -5,10 +5,10 @@ Pattern Tag: prefix-sum / hashmap / subarray-sum
 Review Date: 2026-03-24
 
 ## SRS Tracking
-- Stage: 1
-- Review Date: 2026-06-20
-- Last Rating: Blank
-- Review Count: 4
+- Stage: 2
+- Review Date: 2026-06-25
+- Last Rating: Strong
+- Review Count: 5
 - Graduated: No
 
 ---
