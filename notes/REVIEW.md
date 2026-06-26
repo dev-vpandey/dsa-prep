@@ -9,7 +9,7 @@
 
 | File | Problem | Tag | Stage | Review Date | Last Rating | Review Count | Graduated |
 |---|---|---|---|---|---|---|---|
-| two-sum-solved.md | Two Sum | hashmap / complement-lookup | 2 | 2026-06-23 | — | 0 | No |
+| two-sum-solved.md | Two Sum | hashmap / complement-lookup | 3 | 2026-06-28 | Strong | 1 | No |
 | move-zeroes-solved.md | Move Zeroes | two-pointer / in-place | 6 | 2026-08-05 | Strong | 9 | Yes |
 | reverse-linked-list-solved.md | Reverse Linked List | three-pointer / iterative | 6 | 2026-11-02 | Strong | 10 | Yes |
 | middle-of-linked-list-solved.md | Middle of Linked List | slow-fast pointer | 6 | 2026-08-05 | Strong | 9 | Yes |
@@ -60,7 +60,7 @@
 | possible-bipartition-solved.md | Possible Bipartition | graph / bfs-dfs / bipartite | 4 | 2026-04-13 | Strong | 3 | No |
 | number-of-connected-components-solved.md | Number of Connected Components | graph / dfs | 4 | 2026-04-13 | Strong | 3 | No |
 | min-max-stack-solved.md | Min Max Stack | stack / design / two-stack | 4 | 2026-04-13 | Strong | 3 | No |
-| subarray-sum-equals-k-solved.md | Subarray Sum Equals K | prefix-sum / hashmap | 1 | 2026-06-20 | Blank | 4 | No |
+| subarray-sum-equals-k-solved.md | Subarray Sum Equals K | prefix-sum / hashmap | 2 | 2026-06-25 | Strong | 5 | No |
 | lowest-common-ancestor-binary-tree-solved.md | Lowest Common Ancestor Binary Tree | tree / dfs | 6 | 2026-08-08 | Strong | 2 | Yes |
 | set-matrix-zeroes-solved.md | Set Matrix Zeroes | matrix / two-pass | 6 | 2026-06-27 | Strong | 3 | Yes |
 | evaluate-expression-solved.md | Evaluate Expression | stack / sign-tracking | 3 | 2026-04-23 | Okay | 2 | No |
@@ -80,7 +80,7 @@
 | flatten-binary-tree-to-linked-list-solved.md | Flatten Binary Tree to Linked List | tree / rightmost-of-left | 3 | 2026-04-20 | Okay | 2 | No |
 | flatten-doubly-linked-list-solved.md | Flatten Doubly Linked List | linked-list / child-tail | 3 | 2026-04-20 | Okay | 2 | No |
 | next-permutation-solved.md | Next Permutation | array / find-descent / reverse-suffix | 3 | 2026-04-21 | Okay | 2 | No |
-| longest-consecutive-sequence-solved.md | Longest Consecutive Sequence | hashset / sequence-start | 1 | 2026-06-22 | Weak | 3 | No |
+| longest-consecutive-sequence-solved.md | Longest Consecutive Sequence | hashset / sequence-start | 2 | 2026-06-25 | Strong | 4 | No |
 | valid-sudoku-solved.md | Valid Sudoku | matrix / box-index / set | 3 | 2026-04-21 | Okay | 2 | No |
 | maximum-overlapping-intervals-solved.md | Maximum Overlapping Intervals | heap / end-times | 3 | 2026-04-22 | Okay | 2 | No |
 | interval-list-intersections-solved.md | Interval List Intersections | two-pointer / advance smaller end | 3 | 2026-04-22 | Okay | 2 | No |
@@ -105,7 +105,8 @@
 | vertical-order-traversal-solved.md | Vertical Order Traversal | bfs / treemap / column-tracking | 3 | 2026-04-11 | Okay | 3 | No |
 | redundant-connection-solved.md | Redundant Connection | union-find | 3 | 2026-06-17 | Strong | 4 | No |
 | dijkstras-shortest-path-solved.md | Dijkstra's Shortest Path | graph / dijkstra / min-heap | 3 | 2026-06-22 | Strong | 3 | No |
-| ransom-note-solved.md | Ransom Note | hashmap / frequency-count | 1 | 2026-06-18 | Okay | 2 | No |
-| intersection-of-two-arrays-solved.md | Intersection of Two Arrays | hashset / intersection | 1 | 2026-06-22 | — | 0 | No |
+| ransom-note-solved.md | Ransom Note | hashmap / frequency-count | 2 | 2026-06-25 | Strong | 3 | No |
+| intersection-of-two-arrays-solved.md | Intersection of Two Arrays | hashset / intersection | 2 | 2026-06-25 | Strong | 1 | No |
 | top-k-frequent-words-solved.md | Top K Frequent Words | heap / top-k / custom-comparator | 3 | 2026-06-28 | — | 0 | No |
-| connecting-cities-with-minimum-cost-solved.md | Connecting Cities with Minimum Cost | graph / mst / prim's | 1 | 2026-06-24 | — | 0 | No |
+| connecting-cities-with-minimum-cost-solved.md | Connecting Cities with Minimum Cost | graph / mst / prim's | 2 | 2026-06-26 | Strong | 1 | No |
+| min-cost-connect-all-points-solved.md | Min Cost to Connect All Points | graph / mst / prim's | 1 | 2026-06-27 | — | 0 | No |

@@ -4,10 +4,10 @@ Solved Date: 2026-06-21
 Pattern Tag: hashset / intersection
 
 ## SRS Tracking
-- Stage: 1
-- Review Date: 2026-06-22
-- Last Rating: —
-- Review Count: 0
+- Stage: 2
+- Review Date: 2026-06-25
+- Last Rating: Strong
+- Review Count: 1
 - Graduated: No
 
 ---

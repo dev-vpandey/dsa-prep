@@ -290,6 +290,40 @@ while (!pq.isEmpty() && nodesAdded < n) {
 
 ⚠️ Watch out: `if (inMST[node]) continue` — same stale entry guard as Dijkstra. Without it you'll add nodes to MST multiple times.
 
+### Variant — Implicit Graph (no adjacency list, compute distances on the fly)
+# Use when: every point connects to every other point (e.g. Min Cost to Connect All Points)
+# node index → look up coordinates via points[node][0], points[node][1]
+
+```java
+PriorityQueue<PointCost> minHeap = new PriorityQueue<>(Comparator.comparingInt(a -> a.cost));
+minHeap.offer(new PointCost(0, 0));
+Set<Integer> visited = new HashSet<>();
+int total = 0, connected = 0;
+
+while (!minHeap.isEmpty()) {
+    var curr = minHeap.poll();
+    if (visited.contains(curr.node)) continue;
+    visited.add(curr.node);
+    total += curr.cost;
+    connected++;
+    for (int j = 0; j < n; j++) {
+        if (!visited.contains(j)) {
+            int dist = Math.abs(points[curr.node][0] - points[j][0])
+                     + Math.abs(points[curr.node][1] - points[j][1]);
+            minHeap.offer(new PointCost(j, dist));
+        }
+    }
+}
+return connected == n ? total : -1;
+
+record PointCost(int node, int cost) {}
+```
+
+⚠️ `curr.node` is an index — never use it as a coordinate. Always do `points[node][0]` / `points[node][1]`.
+⚠️ Visited check inside inner loop is on `j` (the neighbor), not `node` (already visited).
+⚠️ Manhattan distance needs two separate `Math.abs()` calls — one wrapping `dx + dy` is wrong.
+⚠️ Space is O(n²) — heap accumulates up to n² entries across all pushes.
+
 ---
 
 ## Your Recurring Mistakes — Group 4
