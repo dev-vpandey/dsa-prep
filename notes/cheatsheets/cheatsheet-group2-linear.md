@@ -179,7 +179,20 @@ PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
 
 // Custom comparator — int[] sorted by index 1 ascending
-PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);
+// ⚠️ subtraction trick can overflow for large/negative values — prefer comparingInt
+PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);  // unsafe if values can overflow
+
+// Safe alternatives (prefer these):
+PriorityQueue<int[]> minPq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));        // min-heap by index 1
+PriorityQueue<int[]> maxPq = new PriorityQueue<>(Comparator.comparingInt((int[] a) -> a[1]).reversed()); // max-heap by index 1
+
+// Type-specific comparingXxx — avoids boxing overhead:
+// int/Integer   → Comparator.comparingInt(...)
+// long/Long     → Comparator.comparingLong(...)
+// double/Double → Comparator.comparingDouble(...)
+// float         → Comparator.comparingDouble(a -> (double) a.floatField)
+// String        → Comparator.comparing(a -> a.field)     // natural/lex order
+// char          → Comparator.comparingInt(a -> a.ch)     // chars are ints
 
 // Custom — sort by frequency asc, then lex desc (K most frequent strings)
 PriorityQueue<String> pq = new PriorityQueue<>(
