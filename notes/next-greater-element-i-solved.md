@@ -4,10 +4,10 @@ Solved Date: 2026-03-24
 Pattern Tag: monotonic-stack / hashmap / next-greater
 
 ## SRS Tracking
-- Stage: 4
-- Review Date: 2026-04-07
-- Last Rating: Strong
-- Review Count: 4
+- Stage: 1
+- Review Date: 2026-06-30
+- Last Rating: Blank
+- Review Count: 5
 - Graduated: No
 
 ---
