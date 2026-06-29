@@ -324,6 +324,36 @@ record PointCost(int node, int cost) {}
 ⚠️ Manhattan distance needs two separate `Math.abs()` calls — one wrapping `dx + dy` is wrong.
 ⚠️ Space is O(n²) — heap accumulates up to n² entries across all pushes.
 
+### Variant — Virtual Node (well + pipe problems)
+# Use when: some nodes can self-source (e.g. build a well) AND connect via edges (pipes).
+# Trick: add virtual node 0 → every real node with cost = self-source cost. Run Prim's from 0.
+# Card: optimize-water-distribution-solved.md
+
+```java
+// add virtual node 0 connected to each house via well cost
+for (int i = 1; i <= n; i++) {
+    graph.computeIfAbsent(0, k -> new ArrayList<>()).add(new int[]{i, wells[i - 1]});
+    graph.computeIfAbsent(i, k -> new ArrayList<>()).add(new int[]{0, wells[i - 1]});
+}
+// add pipes normally, then run Prim's from node 0 with cost 0
+minHeap.offer(new int[]{0, 0});
+```
+
+⚠️ wells[] is 0-indexed, houses are 1-indexed — always use wells[i-1].
+⚠️ No connected check needed — virtual node 0 guarantees every house is reachable by construction.
+
+### When to use `connected == n` check in Prim's
+
+╔══════════════════════════════════════════╦════════════════════════════════════════════════════╗
+║ Situation                                ║ Connected check?                                   ║
+╠══════════════════════════════════════════╬════════════════════════════════════════════════════╣
+║ Virtual node added (universal connector) ║ Drop it — always connected by construction         ║
+║ All-pairs edges computed (implicit graph)║ Drop it — every node reachable                     ║
+║ Problem says "guaranteed connected"      ║ Drop it — trust the constraint                     ║
+║ Raw edges only, no synthetic edges       ║ Keep it — graph may be disconnected                ║
+║ Problem says "return -1 if impossible"   ║ Keep it — that IS the impossible case              ║
+╚══════════════════════════════════════════╩════════════════════════════════════════════════════╝
+
 ---
 
 ## Your Recurring Mistakes — Group 4
@@ -344,5 +374,6 @@ record PointCost(int node, int cost) {}
 - Bipartite: `is-graph-bipartite-solved.md` · `possible-bipartition-solved.md`
 - Dijkstra: `dijkstras-shortest-path-solved.md`
 - Union-Find: `redundant-connection-solved.md`
+- MST Prim's Virtual Node: `optimize-water-distribution-solved.md`
 - BFS shortest path: `word-ladder-solved.md`
 - Multi-source: `pacific-atlantic-water-flow-solved.md` · `surrounded-regions-solved.md`

@@ -45,6 +45,7 @@ dijkstra, weighted shortest path            → § DIJKSTRA
 union find, path compression                → § UNION-FIND
 mst, kruskal                               → § MST KRUSKAL
 mst, prim, connect all points              → § MST PRIM
+mst, prim, virtual node, well pipe        → § MST PRIM              · optimize-water-distribution-solved.md
 
 ## G5 · Binary Search  (group5-binary-search.md)
 binary search, standard                     → § STANDARD
