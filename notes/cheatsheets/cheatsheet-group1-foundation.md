@@ -167,6 +167,23 @@ for (int right = 0; right < nums.length; right++) {
 
 ⚠️ Watch out: skip condition must ALSO check `left < right` — pointers can cross during skipping. Always guard both inner while loops.
 
+```java
+// Sorted count-diff (count pairs satisfying sum < target — batch count, don't check one at a time)
+Collections.sort(nums);
+int left = 0, right = nums.size() - 1, count = 0;
+while (left < right) {
+    int sum = nums.get(left) + nums.get(right);
+    if (sum < target) {
+        count += right - left;  // every index in (left, right] also < target with this left
+        left++;                 // this left fully resolved
+    } else {
+        right--;
+    }
+}
+```
+
+⚠️ Watch out: when sum < target, count ALL of `right-left` at once and advance `left` — do not just `count++` and move `right`, that silently drops valid pairs.
+
 ---
 
 ## ── SLIDING WINDOW ──────────────────────────────────────────────────────────
@@ -233,12 +250,17 @@ Arrays.sort(intervals, (a, b) -> a[1] - b[1]);
 // Merge: new end = Math.max(current[1], next[1])
 
 // Merge intervals pattern
-List<int[]> result = new ArrayList<>();
-result.add(intervals[0]);
-for (int i = 1; i < intervals.length; i++) {
-    int[] last = result.get(result.size() - 1);
-    if (intervals[i][0] <= last[1]) last[1] = Math.max(last[1], intervals[i][1]);
-    else result.add(intervals[i]);
+var currInterval = intervals[0];
+List<int[]> mergedIntervals = new ArrayList<>();
+mergedIntervals.add(currInterval);
+for (var i = 1; i < intervals.length; i++) {
+    var nextInterval = intervals[i];
+    if (currInterval[1] >= nextInterval[0]) {
+        currInterval[1] = Math.max(currInterval[1], nextInterval[1]); // read/write currInterval[1] directly — no shadow copy
+    } else {
+        currInterval = nextInterval;
+        mergedIntervals.add(currInterval);
+    }
 }
 
 // Count rooms / max overlapping (heap of end times)

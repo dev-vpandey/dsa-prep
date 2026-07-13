@@ -5,9 +5,9 @@ Pattern Tag: intervals / sorting / greedy / overlap-merge
 
 ## SRS Tracking
 - Stage: 4
-- Review Date: 2026-04-07
-- Last Rating: Strong
-- Review Count: 4
+- Review Date: 2026-07-22
+- Last Rating: Okay
+- Review Count: 5
 - Graduated: No
 
 ---
@@ -58,6 +58,7 @@ return result
 - Sort before processing — unordered input breaks the approach
 - `max(last.end, new.end)` — don't just set to new.end (contained case)
 - Handle single interval input (result list starts with intervals[0])
+- Don't track a separate `currEnd` variable as a copy of `currInterval[1]` — read/write `currInterval[1]` directly. A shadow copy drifts out of sync after a merge and causes missed merges on chained overlaps (2026-07-01 review bug).
 
 ## Dry Run
 `[[1,3],[2,6],[8,10],[15,18]]`
@@ -76,18 +77,22 @@ import java.util.*;
 class Solution {
     public int[][] merge(int[][] intervals) {
         Arrays.sort(intervals, (a, b) -> a[0] - b[0]); // sort by start
-        List<int[]> result = new ArrayList<>();
-        result.add(intervals[0]);
+        var currInterval = intervals[0];
+        List<int[]> mergedIntervals = new ArrayList<>();
+        mergedIntervals.add(currInterval);
 
-        for (int i = 1; i < intervals.length; i++) {
-            int[] last = result.get(result.size() - 1);
-            if (intervals[i][0] <= last[1]) {
-                last[1] = Math.max(last[1], intervals[i][1]); // merge
+        for (var i = 1; i < intervals.length; i++) {
+            var nextInterval = intervals[i];
+            int nextStart = nextInterval[0], nextEnd = nextInterval[1];
+
+            if (currInterval[1] >= nextStart) {
+                currInterval[1] = Math.max(currInterval[1], nextEnd); // merge — read/write currInterval[1] directly, no shadow copy
             } else {
-                result.add(intervals[i]); // no overlap
+                currInterval = nextInterval;
+                mergedIntervals.add(currInterval);
             }
         }
-        return result.toArray(new int[0][]);
+        return mergedIntervals.toArray(new int[0][]);
     }
 }
 ```

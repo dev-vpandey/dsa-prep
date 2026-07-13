@@ -23,7 +23,8 @@
       "Bash(git push *)",
       "Bash(gh pr *)",
       "Skill(caveman)",
-      "Skill(write-a-skill)"
+      "Skill(write-a-skill)",
+      "Bash(awk *)"
     ]
   }
 }

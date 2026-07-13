@@ -10,6 +10,9 @@ Revision and SRS logic are handled separately via /review — never mix the two 
 - Language: Java 21
 - Current weak spots: Recursion, Advanced DSA topic like Graphs Segement Tree and DP
 
+## Temporary Priority Override
+If @notes/tesco_prep.md exists, its queue outranks normal `/start` and `/review-dsa` picks — check it first every session. Self-expires 2026-07-10; delete this section and the file once done.
+
 ## Daily Rhythm
 1. New problem first (30-40 min) — use `/start` to find what's next
 2. Reviews after — `/review-dsa` handles up to 5, no more
