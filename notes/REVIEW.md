@@ -9,7 +9,7 @@
 
 | File | Problem | Tag | Stage | Review Date | Last Rating | Review Count | Graduated |
 |---|---|---|---|---|---|---|---|
-| two-sum-solved.md | Two Sum | hashmap / complement-lookup | 3 | 2026-06-28 | Strong | 1 | No |
+| two-sum-solved.md | Two Sum | hashmap / complement-lookup | 4 | 2026-07-23 | Strong | 2 | No |
 | move-zeroes-solved.md | Move Zeroes | two-pointer / in-place | 6 | 2026-08-05 | Strong | 9 | Yes |
 | reverse-linked-list-solved.md | Reverse Linked List | three-pointer / iterative | 6 | 2026-11-02 | Strong | 10 | Yes |
 | middle-of-linked-list-solved.md | Middle of Linked List | slow-fast pointer | 6 | 2026-08-05 | Strong | 9 | Yes |
@@ -18,12 +18,12 @@
 | invert-binary-tree-solved.md | Invert Binary Tree | dfs / swap | 6 | 2026-08-26 | Strong | 9 | Yes |
 | max-depth-binary-tree-solved.md | Max Depth Binary Tree | dfs / recursion | 6 | 2026-08-26 | Strong | 9 | Yes |
 | same-tree-solved.md | Same Tree | structural dfs | 5 | 2026-05-08 | Strong | 8 | No |
-| logger-rate-limiter-solved.md | Logger Rate Limiter | hashmap / timestamp | 5 | 2026-05-08 | Strong | 8 | No |
+| logger-rate-limiter-solved.md | Logger Rate Limiter | hashmap / timestamp | 5 | 2026-07-23 | Weak | 9 | No |
 | moving-average-data-stream-solved.md | Moving Average from Data Stream | queue / running-sum | 5 | 2026-05-08 | Strong | 8 | No |
 | lru-cache-solved.md | LRU Cache | hashmap / doubly-linked-list | 5 | 2026-05-12 | Strong | 3 | No |
 | valid-palindrome-solved.md | Valid Palindrome | two-pointer / skip non-alnum | 6 | 2026-07-20 | Strong | 5 | Yes |
 | container-with-most-water-solved.md | Container with Most Water | two-pointer / move shorter | 5 | 2026-07-31 | Strong | 5 | No |
-| triplet-sum-to-zero-solved.md | Triplet Sum to Zero | sort + two-pointer + dedup | 4 | 2026-04-12 | Strong | 4 | No |
+| triplet-sum-to-zero-solved.md | Triplet Sum to Zero | sort + two-pointer + dedup | 4 | 2026-07-22 | Okay | 5 | No |
 | happy-number-solved.md | Happy Number | hashset / cycle detection | 4 | 2026-04-12 | Strong | 4 | No |
 | find-all-anagrams-solved.md | Find All Anagrams in String | fixed sliding window / matched counter | 6 | 2026-08-27 | Strong | 7 | Yes |
 | longest-substring-without-repeating-solved.md | Longest Substring Without Repeating | sliding window / lastIndex | 4 | 2026-04-13 | Strong | 4 | No |
@@ -31,12 +31,12 @@
 | sliding-window-maximum-solved.md | Sliding Window Maximum | monotonic deque of indices | 4 | 2026-04-13 | Strong | 4 | No |
 | intersection-of-linked-lists-solved.md | Intersection of Linked Lists | two-pointer / redirect | 4 | 2026-04-13 | Strong | 4 | No |
 | linked-list-palindrome-solved.md | Linked List Palindrome | reverse second half / compare | 4 | 2026-04-13 | Strong | 4 | No |
-| next-greater-element-i-solved.md | Next Greater Element I | monotonic stack + HashMap | 1 | 2026-06-30 | Blank | 5 | No |
+| next-greater-element-i-solved.md | Next Greater Element I | monotonic stack + HashMap | 2 | 2026-07-02 | Strong | 6 | No |
 | evaluate-reverse-polish-notation-solved.md | Evaluate Reverse Polish Notation | stack / pop b then a | 4 | 2026-04-14 | Strong | 4 | No |
 | implement-stack-using-queues-solved.md | Implement Stack Using Queues | queue / rotate n-1 | 4 | 2026-04-14 | Strong | 4 | No |
 | implement-queue-using-stacks-solved.md | Implement Queue Using Stacks | two stacks / lazy transfer | 4 | 2026-04-14 | Strong | 4 | No |
 | remove-adjacent-duplicates-solved.md | Remove Adjacent Duplicates | StringBuilder as stack | 4 | 2026-04-14 | Strong | 4 | No |
-| balanced-binary-tree-solved.md | Balanced Binary Tree | dfs / -1 sentinel | 1 | 2026-06-30 | Blank | 5 | No |
+| balanced-binary-tree-solved.md | Balanced Binary Tree | dfs / -1 sentinel | 2 | 2026-07-04 | Strong | 7 | No |
 | diameter-binary-tree-solved.md | Diameter of Binary Tree | dfs / return height / global max | 4 | 2026-04-15 | Strong | 4 | No |
 | symmetric-tree-solved.md | Symmetric Tree | dfs / isMirror | 4 | 2026-04-15 | Strong | 4 | No |
 | maximum-width-binary-tree-solved.md | Maximum Width of Binary Tree | bfs / index / normalize | 4 | 2026-04-15 | Strong | 4 | No |
@@ -48,7 +48,7 @@
 | search-2d-matrix-solved.md | Search a 2D Matrix | binary search / row=mid/cols | 4 | 2026-04-16 | Strong | 4 | No |
 | koko-eating-bananas-solved.md | Koko Eating Bananas | binary search on answer / ceiling div | 4 | 2026-04-17 | Strong | 4 | No |
 | find-peak-element-solved.md | Find Peak Element | binary search / compare mid+1 | 4 | 2026-04-17 | Strong | 4 | No |
-| merge-intervals-solved.md | Merge Intervals | sort by start / max end | 4 | 2026-04-17 | Strong | 4 | No |
+| merge-intervals-solved.md | Merge Intervals | sort by start / max end | 4 | 2026-07-22 | Okay | 5 | No |
 | non-overlapping-intervals-solved.md | Non-overlapping Intervals | sort by end / prevEnd | 4 | 2026-04-17 | Strong | 4 | No |
 | number-of-islands-solved.md | Number of Islands | dfs flood fill | 4 | 2026-07-01 | Weak | 5 | No |
 | max-area-of-island-solved.md | Max Area of Island | dfs / return area | 4 | 2026-04-18 | Strong | 4 | No |
@@ -62,7 +62,7 @@
 | min-max-stack-solved.md | Min Max Stack | stack / design / two-stack | 4 | 2026-04-13 | Strong | 3 | No |
 | subarray-sum-equals-k-solved.md | Subarray Sum Equals K | prefix-sum / hashmap | 2 | 2026-07-01 | Okay | 6 | No |
 | lowest-common-ancestor-binary-tree-solved.md | Lowest Common Ancestor Binary Tree | tree / dfs | 6 | 2026-08-08 | Strong | 2 | Yes |
-| set-matrix-zeroes-solved.md | Set Matrix Zeroes | matrix / two-pass | 6 | 2026-06-27 | Strong | 3 | Yes |
+| set-matrix-zeroes-solved.md | Set Matrix Zeroes | matrix / two-pass | 6 | 2026-09-28 | Okay | 4 | Yes |
 | evaluate-expression-solved.md | Evaluate Expression | stack / sign-tracking | 3 | 2026-04-23 | Okay | 2 | No |
 | word-search-ii-solved.md | Word Search II | trie / dfs / backtracking | 3 | 2026-04-24 | Okay | 2 | No |
 | 3sum-closest-solved.md | 3Sum Closest | two-pointer / three-sum | 3 | 2026-04-25 | Okay | 2 | No |
@@ -107,7 +107,8 @@
 | dijkstras-shortest-path-solved.md | Dijkstra's Shortest Path | graph / dijkstra / min-heap | 3 | 2026-06-22 | Strong | 3 | No |
 | ransom-note-solved.md | Ransom Note | hashmap / frequency-count | 3 | 2026-07-03 | Strong | 4 | No |
 | intersection-of-two-arrays-solved.md | Intersection of Two Arrays | hashset / intersection | 2 | 2026-07-01 | Okay | 2 | No |
-| top-k-frequent-words-solved.md | Top K Frequent Words | heap / top-k / custom-comparator | 3 | 2026-06-28 | — | 0 | No |
+| top-k-frequent-words-solved.md | Top K Frequent Words | heap / top-k / custom-comparator | 4 | 2026-07-17 | Strong | 1 | No |
 | connecting-cities-with-minimum-cost-solved.md | Connecting Cities with Minimum Cost | graph / mst / prim's | 3 | 2026-07-03 | Strong | 2 | No |
 | min-cost-connect-all-points-solved.md | Min Cost to Connect All Points | graph / mst / prim's | 2 | 2026-06-30 | Strong | 1 | No |
-| optimize-water-distribution-solved.md | Optimize Water Distribution in a Village | graph / mst / virtual-node / prim's | 1 | 2026-06-29 | — | 0 | No |
+| optimize-water-distribution-solved.md | Optimize Water Distribution in a Village | graph / mst / virtual-node / prim's | 1 | 2026-07-03 | Weak | 1 | No |
+| count-pairs-sum-less-than-target-solved.md | Count Pairs Whose Sum is Less than Target | two-pointer / sorted-count-diff | 2 | 2026-07-04 | Strong | 1 | No |

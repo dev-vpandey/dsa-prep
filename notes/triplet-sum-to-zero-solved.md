@@ -5,9 +5,9 @@ Pattern Tag: two-pointer / sorting / deduplication / three-sum
 
 ## SRS Tracking
 - Stage: 4
-- Review Date: 2026-04-07
-- Last Rating: Strong
-- Review Count: 4
+- Review Date: 2026-07-22
+- Last Rating: Okay
+- Review Count: 5
 - Graduated: No
 
 ---
